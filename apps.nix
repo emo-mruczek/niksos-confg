@@ -10,5 +10,6 @@
 		gimp
 		thunderbird
 		libreoffice-qt
+        dwarf-fortress
 	];
 }

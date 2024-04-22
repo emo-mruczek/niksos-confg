@@ -22,5 +22,10 @@
 		dig
 		# for hyprland
 		swww
+        waybar
+        wofi
+
+
+        lolcat
 	];
 }

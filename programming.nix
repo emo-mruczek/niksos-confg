@@ -13,5 +13,7 @@
 		swiProlog
 		jdk
 		python311Packages.pip
+        rustc
+        cargo
 	];
 }
