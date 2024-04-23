@@ -18,14 +18,18 @@
 		inetutils # somethig for networking
 		wl-clipboard # for clipboard
 		neovim
+        brightnessctl
 		#plymouth
 		dig
+        wev
 		# for hyprland
 		swww
         waybar
         wofi
 
 
+        font-awesome
         lolcat
+        jetbrains-mono
 	];
 }

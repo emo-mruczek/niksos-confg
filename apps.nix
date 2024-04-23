@@ -11,5 +11,8 @@
 		thunderbird
 		libreoffice-qt
         dwarf-fortress
+        hollywood
+        cbonsai
+        cmatrix
 	];
 }

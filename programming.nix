@@ -15,5 +15,6 @@
 		python311Packages.pip
         rustc
         cargo
+        mono
 	];
 }
