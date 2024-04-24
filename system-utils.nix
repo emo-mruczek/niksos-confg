@@ -19,6 +19,7 @@
 		wl-clipboard # for clipboard
 		neovim
         brightnessctl
+        pavucontrol
 		#plymouth
 		dig
         wev
