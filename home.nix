@@ -25,13 +25,14 @@
 	enableCompletion = true;
     shellAliases = {
         u = "nixos-rebuild switch --flake \"/home/felix/nixos-config\" -L --use-remote-sudo";
-        gg = " gg() {
-            git add .
-            git commit -m '$1'
-            git push
-            }
-        ";
     };
+    initExtra = ''
+    gg () {
+    git add .
+    git commit -m "$1"
+    git push
+    } 
+    '';
 	};
     
     programs.waybar = {
@@ -41,12 +42,12 @@
                 layer = "top";
                 position = "top";
                 height = 32;
-                spacing = 4;
+                spacing = 1;
                 passthrough = false;
                 fixed-center = true;
                 modules-left = [ "hyprland/workspaces" "hyprland/mode" "hyprland/taskbar"];
                 modules-center = [ "hyprland/window" "custom/hello-from-waybar"];
-                modules-right = [ "cpu" "temperature" "memory" "pulseaudio" "clock" "clock#simpleclock" "tray" "custom/power"];
+                modules-right = [ "cpu" "temperature" "memory" "pulseaudio" "clock" "clock#simpleclock" "battery" "tray" "custom/power"];
 
                 "custom/hello-from-waybar" = {
                 format = "{}";
@@ -85,6 +86,12 @@
                 };
                 "memory" = {
                 format = "  {used:0.2f}G";
+                };
+                "battery" = {
+                format = "{icon} {capacity}%";
+                format-charging = " {capacity}%";
+                format-plugged = " {capacity}%";
+                format-icons = ["" "" "" "" ""];
                 };
                 "pulseaudio" = {
                 format = "{icon} {volume}%";
@@ -175,6 +182,7 @@ window#waybar.hidden {
 #tray,
 #memory,
 #temperature,
+#battery,
 #window {
   min-height: 0;
   padding: 2px 10px;
@@ -202,6 +210,10 @@ window#waybar.empty #window {
 
 #memory {
   color: #cba6f7;
+}
+
+#battery {
+  color: #74c7ec;
 }
 
 #clock {

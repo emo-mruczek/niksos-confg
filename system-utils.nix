@@ -20,6 +20,9 @@
 		neovim
         brightnessctl
         pavucontrol
+        networkmanagerapplet
+        pkg-configUpstream
+        openssl_3_1
 		#plymouth
 		dig
         wev
@@ -27,6 +30,9 @@
 		swww
         waybar
         wofi
+        mako
+        grim
+        slurp
 
 
         font-awesome
