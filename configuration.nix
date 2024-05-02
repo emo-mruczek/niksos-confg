@@ -14,9 +14,9 @@
   
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Bootloader.
-  #boot.loader.systemd-boot.enable = true;
- # boot.loader.efi.canTouchEfiVariables = true;
-boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
 
   networking.hostName = "izolda"; # Define your hostname.
  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -30,10 +30,11 @@ boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
 
  # Enable the X11 windowing system.
   services.xserver.enable = true;
+  #services.xserver.displayManager.sddm.wayland.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
+#  services.xserver.displayManager.sddm.enable = true;
+ # services.xserver.desktopManager.plasma5.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -58,6 +59,11 @@ boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
          ];
 
   };
+
+  fonts.packages = with pkgs; [
+   font-awesome_5
+   font-awesome_4
+  ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

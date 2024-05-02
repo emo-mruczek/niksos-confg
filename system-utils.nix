@@ -23,9 +23,11 @@
         networkmanagerapplet
         pkg-configUpstream
         openssl_3_1
+        lshw
 		#plymouth
 		dig
         wev
+        trashy
 		# for hyprland
 		swww
         waybar
@@ -35,7 +37,8 @@
         slurp
 
 
-        font-awesome
+        font-awesome_5
+        line-awesome
         lolcat
         jetbrains-mono
 	];

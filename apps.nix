@@ -14,5 +14,7 @@
         hollywood
         cbonsai
         cmatrix
+        kate
+        dolphin
 	];
 }

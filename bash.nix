@@ -3,7 +3,7 @@ programs.bash = {
 	enable = true;
 	enableCompletion = true;
     shellAliases = {
-        u = "nixos-rebuild switch --flake \"/home/felix/nixos-config\" -L --use-remote-sudo";
+        u = "nixos-rebuild switch --flake \"/home/felix/niksos-confg\" -L --use-remote-sudo";
     };
     initExtra = ''
     gg () {
