@@ -6,7 +6,7 @@
             mainBar = {
                 layer = "top";
                 position = "top";
-                height = 32;
+                #height = 32;
                 spacing = 1;
                 passthrough = false;
                 fixed-center = true;
@@ -90,7 +90,7 @@
     * {
   min-height: 0;
   font-family: Lexend, "Font JetBrainsMono 6 Free Solid";
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -224,6 +224,4 @@ tooltip {
 '';
 
     };
-
-
 }
