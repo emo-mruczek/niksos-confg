@@ -24,6 +24,8 @@
         pkg-configUpstream
         openssl_3_1
         lshw
+        zip
+        unrar
 		#plymouth
 		dig
         wev
