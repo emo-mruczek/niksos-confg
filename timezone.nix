@@ -1,6 +1,8 @@
-{ pkgs, config, ...}:
-{	
-	
+{
+  pkgs,
+  config,
+  ...
+}: {
   # Set your time zone.
   time.timeZone = "Europe/Warsaw";
 
@@ -18,6 +20,4 @@
     LC_TELEPHONE = "pl_PL.UTF-8";
     LC_TIME = "pl_PL.UTF-8";
   };
-
 }
-	
