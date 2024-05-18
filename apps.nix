@@ -6,6 +6,7 @@
     librewolf
     signal-desktop
     steam
+    protonup-qt
     gimp
     thunderbird
     libreoffice-qt

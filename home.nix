@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   ...
 }: {
@@ -8,6 +7,7 @@
     ./bash.nix
     ./git.nix
     ./wofi.nix
+    ./kitty.nix
   ];
 
   home = {

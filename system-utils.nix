@@ -26,10 +26,15 @@
     zip
     unrar
     #plymouth
+    xdg-desktop-portal-hyprland
+    xdg-desktop-portal-wlr
+    xdg-desktop-portal
+    xdg-utils
     dig
     wev
     trashy
     cachix
+    killall
     # for hyprland
     swww
     waybar

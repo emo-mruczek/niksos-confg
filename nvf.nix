@@ -24,6 +24,10 @@
         todo-comments.enable = true;
       };
 
+      utility = {
+        surround.enable = true;
+      };
+
       theme = {
         enable = true;
         transparent = true;
