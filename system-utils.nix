@@ -1,6 +1,8 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     tree
+    imv
+    efibootmgr
     gparted
     neovim
     hashcat
@@ -25,6 +27,7 @@
     lshw
     zip
     unrar
+    cups
     #plymouth
     xdg-desktop-portal-hyprland
     xdg-desktop-portal-wlr

@@ -11,14 +11,19 @@
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
   hardware.nvidia.modesetting.enable = true;
   services.xserver.videoDrivers = ["nvidia" "amdgpu"];
+  #services.xserver.displayManager.setupCommands;
   hardware.nvidia.prime = {
     # Make sure to use the correct Bus ID values for your system!
-    amdgpuBusId = "PCI:65:00.0";
-    nvidiaBusId = "PCI:01:00.0";
+    amdgpuBusId = "PCI:65:00:0";
+    nvidiaBusId = "PCI:01:00:0";
+    allowExternalGpu = true;
+    reverseSync.enable = true;
+
   };
   #    hardware.nvidia.open = true;
   hardware.nvidia.nvidiaSettings = true;
-  hardware.nvidia.powerManagement.enable = false;
+  hardware.nvidia.powerManagement.enable = true;
+  
   hardware.opengl = {
     enable = true;
     driSupport = true;

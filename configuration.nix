@@ -30,7 +30,13 @@
   networking.networkmanager.enable = true;
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+#  services.xserver.enable = true;
+#  services.xserver.displayManager.lightdm = {
+#    enable = true;
+#  };
+#  services.xserver.displayManager.defaultSession = "hyprland";
+    
+
   #services.xserver.displayManager.sddm.wayland.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
@@ -48,6 +54,11 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+  services.avahi = {
+    enable = true;
+    #nssmdns4 = true;
+    openFirewall = true;
+  };
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
 
