@@ -13,7 +13,7 @@
 
   # Enabling flakes
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+    nix.settings.experimental-features = ["nix-command" "flakes"];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -28,14 +28,39 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  
+  #environment.systemPackages = let themes = pkgs.callPackage nixpkgs/pkgs/sddm-rose-pine.nix {}; in [
+  #  themes.sddm-rose-pine
+  #];
+
+  environment.systemPackages = with pkgs; [
+    (callPackage ./sddm-rose-pine.nix {}).sddm-rose-pine
+  ];
 
   # Enable the X11 windowing system.
-#  services.xserver.enable = true;
-#  services.xserver.displayManager.lightdm = {
-#    enable = true;
-#  };
+  services.xserver = {
+    layout = "pl";
+    xkbVariant = "";
+    enable = true;
+    displayManager.sddm = {
+      enable = true;
+      wayland.enable = true;
+      theme = "rose-pine";
+    };
+  };
+
+  security.pam.services.swaylock = {
+    text = ''
+      auth include login
+    '';
+  };
+  #doesnt work with hyprland
+  #services.xserver.displayManager.lightdm = {
+  #  enable = true;
+  #};
 #  services.xserver.displayManager.defaultSession = "hyprland";
     
+
 
   #services.xserver.displayManager.sddm.wayland.enable = true;
 
@@ -44,10 +69,6 @@
   # services.xserver.desktopManager.plasma5.enable = true;
 
   # Configure keymap in X11
-  services.xserver = {
-    layout = "pl";
-    xkbVariant = "";
-  };
 
   # Configure console keymap
   console.keyMap = "pl2";

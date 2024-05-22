@@ -1,6 +1,11 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     tree
+    nix-prefetch-github
+#    libsForQt5.qt5.qtquickcontrols2
+    qt6.qt5compat
+#   sbclPackages.qtsvg
+    libsForQt5.qt5.qtgraphicaleffects
     imv
     efibootmgr
     gparted
@@ -45,6 +50,7 @@
     mako
     grim
     slurp
+    swaylock-effects
 
     font-awesome_5
     line-awesome

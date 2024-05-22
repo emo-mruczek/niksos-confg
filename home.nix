@@ -8,6 +8,7 @@
     ./git.nix
     ./wofi.nix
     ./kitty.nix
+    ./swaylock.nix
   ];
 
   home = {

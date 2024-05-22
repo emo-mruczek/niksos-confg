@@ -14,11 +14,14 @@
   #services.xserver.displayManager.setupCommands;
   hardware.nvidia.prime = {
     # Make sure to use the correct Bus ID values for your system!
-    amdgpuBusId = "PCI:65:00:0";
-    nvidiaBusId = "PCI:01:00:0";
-    allowExternalGpu = true;
-    reverseSync.enable = true;
-
+    amdgpuBusId = "PCI:65:0:0";
+    nvidiaBusId = "PCI:01:0:0";
+    #allowExternalGpu = false;
+    #reverseSync.enable = true;
+    offload = {
+      enable = true;
+      enableOffloadCmd = true;
+    };
   };
   #    hardware.nvidia.open = true;
   hardware.nvidia.nvidiaSettings = true;
