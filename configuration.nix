@@ -35,6 +35,7 @@
 
   environment.systemPackages = with pkgs; [
     (callPackage ./sddm-rose-pine.nix {}).sddm-rose-pine
+    (callPackage ./packettracer.nix {inherit (pkgs) stdenv;}).packettracer
   ];
 
   # Enable the X11 windowing system.
@@ -87,9 +88,19 @@
   users.users.felix = {
     isNormalUser = true;
     description = "felix";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "ubridge"];
     packages = with pkgs; [
     ];
+  };
+
+  users.groups.ubridge = {};
+
+  security.wrappers.ubridge = {
+    source = "/run/current-system/sw/bin/ubridge";
+    capabilities = "cap_net_admin,cap_net_raw=ep";
+    owner = "root";
+    group = "ubridge";
+    permissions = "u+rx,g+x";
   };
 
   nix.settings.trusted-users = ["root" "felix"];

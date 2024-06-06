@@ -14,6 +14,11 @@ programs.kitty = {
     "ctrl+shift+v" = "paste_from_clipboard";
     "ctrl+shift+enter" = "new_window_with_cwd";
     "ctrl+shift+t" = "new_tab_with_cwd";
-  }; 
+  };
+  settings = {
+    confirm_os_widnow_close = 1;
+
+  };
+  shellIntegration.enableBashIntegration = true;
   };
 }

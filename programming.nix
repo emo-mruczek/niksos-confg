@@ -1,7 +1,11 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     gcc
+    astyle
+    julia
+    go
     gnumake
+    gnat
     rocmPackages.llvm.clang-unwrapped
     python3
     rocmPackages.rocgdb

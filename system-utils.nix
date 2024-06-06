@@ -1,6 +1,8 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    amdgpu_top
     tree
+    libcap
     nix-prefetch-github
 #    libsForQt5.qt5.qtquickcontrols2
     qt6.qt5compat
@@ -9,6 +11,7 @@
     imv
     efibootmgr
     gparted
+    inxi
     neovim
     hashcat
     btop

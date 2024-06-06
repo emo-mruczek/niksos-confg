@@ -11,6 +11,7 @@
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
   hardware.nvidia.modesetting.enable = true;
   services.xserver.videoDrivers = ["nvidia" "amdgpu"];
+  # services.xserver.videoDrivers = ["nvidia"];
   #services.xserver.displayManager.setupCommands;
   hardware.nvidia.prime = {
     # Make sure to use the correct Bus ID values for your system!
