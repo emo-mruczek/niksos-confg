@@ -13,7 +13,7 @@
 
   # Enabling flakes
 
-    nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -28,7 +28,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  
+
   #environment.systemPackages = let themes = pkgs.callPackage nixpkgs/pkgs/sddm-rose-pine.nix {}; in [
   #  themes.sddm-rose-pine
   #];
@@ -59,9 +59,7 @@
   #services.xserver.displayManager.lightdm = {
   #  enable = true;
   #};
-#  services.xserver.displayManager.defaultSession = "hyprland";
-    
-
+  #  services.xserver.displayManager.defaultSession = "hyprland";
 
   #services.xserver.displayManager.sddm.wayland.enable = true;
 

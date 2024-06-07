@@ -4,7 +4,7 @@
     mangohud
     superTuxKart
     vpcs
-#    ciscoPacketTracer8
+    #    ciscoPacketTracer8
     legendary-gl
     heroic
     obs-studio

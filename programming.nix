@@ -9,7 +9,7 @@
     rocmPackages.llvm.clang-unwrapped
     python3
     rocmPackages.rocgdb
-    nodejs_21
+    nodejs_22
     gnuplot_qt
     ruby
     swiProlog

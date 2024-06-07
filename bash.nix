@@ -12,6 +12,7 @@
       t = "trash";
       n = "nvim";
       sn = "shutdown now";
+      gp = "git pull";
     };
     initExtra = ''
       gg () {

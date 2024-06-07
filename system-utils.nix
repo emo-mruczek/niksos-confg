@@ -4,9 +4,9 @@
     tree
     libcap
     nix-prefetch-github
-#    libsForQt5.qt5.qtquickcontrols2
+    #    libsForQt5.qt5.qtquickcontrols2
     qt6.qt5compat
-#   sbclPackages.qtsvg
+    #   sbclPackages.qtsvg
     libsForQt5.qt5.qtgraphicaleffects
     imv
     efibootmgr
@@ -31,7 +31,7 @@
     pavucontrol
     networkmanagerapplet
     pkg-configUpstream
-    openssl_3_1
+    openssl_3_3
     lshw
     zip
     unrar
