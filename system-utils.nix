@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     amdgpu_top
+    parted
     tree
     libcap
     nix-prefetch-github

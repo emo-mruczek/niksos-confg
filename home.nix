@@ -6,6 +6,7 @@
     ./wofi.nix
     ./kitty.nix
     ./swaylock.nix
+    ./obs.nix
   ];
 
   home = {

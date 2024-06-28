@@ -1,6 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by r/unning ‘nixos-help’).
 {
   config,
   pkgs,
@@ -14,47 +11,74 @@
   # Enabling flakes
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
 
-  networking.hostName = "izolda"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  services.flatpak.enable = true;
 
-  # Enable networking
-  networking.networkmanager.enable = true;
-
-  #environment.systemPackages = let themes = pkgs.callPackage nixpkgs/pkgs/sddm-rose-pine.nix {}; in [
-  #  themes.sddm-rose-pine
-  #];
+  networking = {
+    hostName = "izolda";
+    networkmanager.enable = true;
+  };
 
   environment.systemPackages = with pkgs; [
     (callPackage ./sddm-rose-pine.nix {}).sddm-rose-pine
     (callPackage ./packettracer.nix {inherit (pkgs) stdenv;}).packettracer
   ];
 
-  # Enable the X11 windowing system.
-  services.xserver = {
-    layout = "pl";
+  services = {
+    xserver = {
+        layout = "pl";
     xkbVariant = "";
     enable = true;
     displayManager.sddm = {
       enable = true;
       wayland.enable = true;
       theme = "rose-pine";
+
+
     };
+
   };
+};
+  # Bootloader.
+  #boot.loader.systemd-boot.enable = true;
+  #boot.loader.efi.canTouchEfiVariables = true;
+  #boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
+
+  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+
+  # Configure network proxy if necessary
+  # networking.proxy.default = "http://user:password@proxy:port/";
+  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+
+  #environment.systemPackages = let themes = pkgs.callPackage nixpkgs/pkgs/sddm-rose-pine.nix {}; in [
+  #  themes.sddm-rose-pine
+  #];
+
+  # Enable the X11 windowing system.
+  
 
   security.pam.services.swaylock = {
     text = ''
       auth include login
     '';
   };
+
+  virtualisation = {
+        libvirtd = {
+            enable = true;
+            onBoot = "ignore";
+            qemu = {
+             package = pkgs.qemu_kvm;
+                ovmf.enable = true;
+                runAsRoot = false;
+                swtpm.enable = true;
+            };
+        };
+    };
+
+    networking.firewall.trustedInterfaces = [ "virbr0" ];
+
   #doesnt work with hyprland
   #services.xserver.displayManager.lightdm = {
   #  enable = true;
@@ -86,7 +110,7 @@
   users.users.felix = {
     isNormalUser = true;
     description = "felix";
-    extraGroups = ["networkmanager" "wheel" "ubridge"];
+    extraGroups = ["networkmanager" "wheel" "ubridge" "libvirtd"];
     packages = with pkgs; [
     ];
   };
@@ -147,7 +171,15 @@
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+   networking.firewall.enable = true;
+   
+   hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+
+  };
+
+  services.blueman.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

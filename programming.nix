@@ -1,15 +1,16 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     gcc
+    sbcl
+    smlnj
     astyle
     julia
-    go
+    ghc
     gnumake
     gnat
     rocmPackages.llvm.clang-unwrapped
     python3
     rocmPackages.rocgdb
-    nodejs_22
     gnuplot_qt
     ruby
     swiProlog

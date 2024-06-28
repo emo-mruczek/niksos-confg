@@ -1,7 +1,4 @@
 {
-  config,
-  pkgs,
-  lib,
   ...
 }: {
   programs.bash = {
@@ -13,6 +10,7 @@
       n = "nvim";
       sn = "shutdown now";
       gp = "git pull";
+      ss = "systemctl suspend";
     };
     initExtra = ''
       gg () {

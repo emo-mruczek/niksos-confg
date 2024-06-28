@@ -1,19 +1,15 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     p3x-onenote
+    blueman
     mangohud
     superTuxKart
     vpcs
     #    ciscoPacketTracer8
     legendary-gl
     heroic
-    obs-studio
     qemu
-    dynamips
-    ubridge
     firefox
-    gns3-server
-    gns3-gui
     kate
     librewolf
     signal-desktop
@@ -30,5 +26,7 @@
     dolphin
     obsidian
     wineWowPackages.waylandFull
+    osu-lazer-bin
+    protonplus
   ];
 }

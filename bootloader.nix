@@ -1,14 +1,21 @@
 {
   pkgs,
-  config,
   ...
 }: {
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+
+  boot = {
+  loader = {
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+  };
+  initrd.systemd.enable = true;
+  };
+
+  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
+
   # boot.loader.timeout = 2;
   # boot.initrd.enable = true;
-  boot.initrd.systemd.enable = true;
   boot.plymouth = {
     enable = false;
     font = "${pkgs.jetbrains-mono}/share/fonts/truetype/JetBrainsMono-Regular.ttf";
