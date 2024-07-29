@@ -19,5 +19,7 @@
     rustc
     cargo
     mono
+    pyenv
+    qtcreator
   ];
 }

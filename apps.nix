@@ -28,5 +28,12 @@
     wineWowPackages.waylandFull
     osu-lazer-bin
     protonplus
+    stlink-tool
+    stlink
+   gcc-arm-embedded-10
+   syncthing
+   prismlauncher
+
+#pkgsCross.arm-embedded.buildPackages.gdb
   ];
 }

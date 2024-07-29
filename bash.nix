@@ -10,7 +10,7 @@
       n = "nvim";
       sn = "shutdown now";
       gp = "git pull";
-      ss = "systemctl suspend";
+      sus = "systemctl suspend";
     };
     initExtra = ''
       gg () {

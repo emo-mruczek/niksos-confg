@@ -2,13 +2,17 @@
   environment.systemPackages = with pkgs; [
     amdgpu_top
     parted
+    flatpak-builder
     tree
     libcap
+    zlib
     nix-prefetch-github
     #    libsForQt5.qt5.qtquickcontrols2
     qt6.qt5compat
+    kdePackages.qt5compat
     #   sbclPackages.qtsvg
     libsForQt5.qt5.qtgraphicaleffects
+    libsForQt5.full
     imv
     efibootmgr
     gparted
@@ -60,5 +64,11 @@
     line-awesome
     lolcat
     jetbrains-mono
+
+    libffi
+    readline
+    bzip2
+    ncurses
+
   ];
 }
