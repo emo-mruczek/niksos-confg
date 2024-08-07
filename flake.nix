@@ -11,11 +11,14 @@
       #       inputs.neovim-nightly-overlay.follows = "neovim-nightly-overlay";
     };
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+   
+ hyprland = {
+            type = "git";
+            url = "https://github.com/hyprwm/Hyprland";
+            submodules = true;
+        };
 
+    	
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";

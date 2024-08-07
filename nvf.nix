@@ -86,8 +86,8 @@
         enable = true;
         indentBlankline = {
           enable = true;
-          eolChar = null;
-          fillChar = null;
+          #          eolChar = null;
+          #fillChar = null;
         };
         highlight-undo.enable = true;
       };
