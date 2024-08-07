@@ -4,7 +4,7 @@
     sbcl
     smlnj
     astyle
-    julia
+    #    julia
     ghc
     gnumake
     gnat

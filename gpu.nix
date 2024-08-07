@@ -37,9 +37,9 @@
   hardware.nvidia.nvidiaSettings = true;
   hardware.nvidia.powerManagement.enable = true;
 
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
+ # hardware.opengl = {
+ #   enable = true;
+ #   driSupport = true;
+ #   driSupport32Bit = true;
+ # };
 }

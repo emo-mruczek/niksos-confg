@@ -1,12 +1,12 @@
 {
-  description = "Niksos flake VERY N00B DO NOT RECCOMEND";
+  description = "Niksos flake VERY N00B DO NOT RECOMMEND";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     #neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
     nvf = {
-      url = "github:notashelf/nvf/plugin/neotree";
+      url = "github:notashelf/nvf/main";
       inputs.nixpkgs.follows = "nixpkgs";
       #       inputs.neovim-nightly-overlay.follows = "neovim-nightly-overlay";
     };
@@ -17,7 +17,7 @@
     };
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -45,8 +45,7 @@
           ./hyprland.nix
           ./nvf.nix
 
-          home-manager.nixosModules.home-manager
-          {
+          home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 

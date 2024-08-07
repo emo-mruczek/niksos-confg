@@ -22,7 +22,7 @@
 
   environment.systemPackages = with pkgs; [
     (callPackage ./sddm-rose-pine.nix {}).sddm-rose-pine
-    (callPackage ./packettracer.nix {inherit (pkgs) stdenv;}).packettracer
+    #(callPackage ./packettracer.nix {inherit (pkgs) stdenv;}).packettracer
   ];
 
   services = {
