@@ -6,6 +6,7 @@
     tree
     libcap
     zlib
+    powertop
     nix-prefetch-github
     #    libsForQt5.qt5.qtquickcontrols2
     qt6.qt5compat
@@ -17,7 +18,6 @@
     efibootmgr
     gparted
     inxi
-    neovim
     hashcat
     btop
     mesa-demos # demos for 3D
@@ -31,7 +31,6 @@
     inetutils # somethig for networking
     wl-clipboard # for clipboard
     alejandra
-    neovim
     brightnessctl
     pavucontrol
     networkmanagerapplet

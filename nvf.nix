@@ -1,10 +1,11 @@
-{inputs, ...}: {
+{inputs, pkgs, ...}: {
   imports = [inputs.nvf.nixosModules.default];
 
   programs.nvf = {
     enable = true;
 
     settings.vim = {
+    package = inputs.neovim-overlay.packages.${pkgs.system}.neovim;
       viAlias = false;
       vimAlias = false;
       enableLuaLoader = true;
