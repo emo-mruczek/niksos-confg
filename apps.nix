@@ -33,6 +33,9 @@
    gcc-arm-embedded-10
    syncthing
    prismlauncher
+    logisim-evolution
+    kicad-small
+
 
 #pkgsCross.arm-embedded.buildPackages.gdb
   ];
