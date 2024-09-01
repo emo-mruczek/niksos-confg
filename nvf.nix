@@ -72,6 +72,7 @@
         context.enable = true;
         highlight.enable = true;
         indent.enable = true;
+        addDefaultGrammars = false; # cuz its broken rn
       };
 
       autocomplete = {
