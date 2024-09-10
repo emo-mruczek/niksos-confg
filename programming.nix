@@ -21,5 +21,8 @@
     mono
     pyenv
     qtcreator
+    gdb
+    valgrind
+    flex
   ];
 }

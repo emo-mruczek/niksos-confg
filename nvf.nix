@@ -5,7 +5,7 @@
     enable = true;
 
     settings.vim = {
-    package = inputs.neovim-overlay.packages.${pkgs.system}.neovim;
+# package = inputs.neovim-overlay.packages.${pkgs.system}.neovim;
       viAlias = false;
       vimAlias = false;
       enableLuaLoader = true;

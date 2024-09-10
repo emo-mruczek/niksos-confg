@@ -35,6 +35,7 @@
    prismlauncher
     logisim-evolution
     kicad-small
+    keepassxc
 
 
 #pkgsCross.arm-embedded.buildPackages.gdb
