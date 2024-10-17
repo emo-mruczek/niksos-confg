@@ -4,24 +4,23 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     neovim-overlay.url = "github:nix-community/neovim-nightly-overlay";
-   
-   nvf = {
+
+    nvf = {
       url = "github:notashelf/nvf/main";
-   inputs.nixpkgs.follows = "nixpkgs";
-	inputs.neovim-overlay.follows = "neovim-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.neovim-overlay.follows = "neovim-overlay";
     };
 
     hyprland = {
-            type = "git";
-            url = "https://github.com/hyprwm/Hyprland";
-            submodules = true;
-        };
-    	
+      type = "git";
+      url = "https://github.com/hyprwm/Hyprland";
+      submodules = true;
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
   };
 
   outputs = {
@@ -45,9 +44,10 @@
           ./system-utils.nix
           ./timezone.nix
           ./hyprland.nix
-	  ./nvf.nix
+          ./nvf.nix
 
-          home-manager.nixosModules.home-manager {
+          home-manager.nixosModules.home-manager
+          {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 

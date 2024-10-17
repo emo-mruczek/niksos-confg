@@ -68,6 +68,5 @@
     readline
     bzip2
     ncurses
-
   ];
 }

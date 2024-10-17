@@ -1,15 +1,12 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   # Bootloader.
 
   boot = {
-  loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-  };
-  initrd.systemd.enable = true;
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    initrd.systemd.enable = true;
   };
 
   boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;

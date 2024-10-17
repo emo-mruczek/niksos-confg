@@ -1,6 +1,4 @@
-{
-  ...
-}: {
+{...}: {
   programs.bash = {
     enable = true;
     enableCompletion = true;
@@ -11,6 +9,7 @@
       sn = "shutdown now";
       gp = "git pull";
       sus = "systemctl suspend";
+      fuck = "nix flake update";
     };
     initExtra = ''
       gg () {

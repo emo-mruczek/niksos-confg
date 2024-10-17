@@ -1,11 +1,15 @@
-{inputs, pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [inputs.nvf.nixosModules.default];
 
   programs.nvf = {
     enable = true;
 
     settings.vim = {
-# package = inputs.neovim-overlay.packages.${pkgs.system}.neovim;
+      # package = inputs.neovim-overlay.packages.${pkgs.system}.neovim;
       viAlias = false;
       vimAlias = false;
       enableLuaLoader = true;
@@ -72,7 +76,7 @@
         context.enable = true;
         highlight.enable = true;
         indent.enable = true;
-        addDefaultGrammars = false; # cuz its broken rn
+        addDefaultGrammars = true;
       };
 
       autocomplete = {
@@ -153,6 +157,9 @@
         rust = {
           enable = true;
           crates.enable = true;
+        };
+        html = {
+          enable = true;
         };
       };
     };

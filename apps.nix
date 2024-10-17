@@ -30,14 +30,21 @@
     protonplus
     stlink-tool
     stlink
-   gcc-arm-embedded-10
-   syncthing
-   prismlauncher
+    gcc-arm-embedded-10
+    syncthing
+    prismlauncher
     logisim-evolution
     kicad-small
     keepassxc
+    krita
+    android-studio
+    openconnect
+    calibre
+    teams-for-linux
+    texliveFull
+    subversionClient
+    asciinema
 
-
-#pkgsCross.arm-embedded.buildPackages.gdb
+    #pkgsCross.arm-embedded.buildPackages.gdb
   ];
 }

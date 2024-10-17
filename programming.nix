@@ -24,5 +24,7 @@
     gdb
     valgrind
     flex
+    umlet
+    nodejs_22
   ];
 }

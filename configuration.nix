@@ -11,7 +11,7 @@
   # Enabling flakes
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  
+
   nix.settings = {
     substituters = ["https://hyprland.cachix.org"];
     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
@@ -31,29 +31,26 @@
 
   services = {
     xserver = {
-        layout = "pl";
-    xkbVariant = "";
-    enable = true;
-    displayManager.sddm = {
+      layout = "pl";
+      xkbVariant = "";
       enable = true;
-      wayland.enable = true;
-      theme = "rose-pine";
-
-
+      displayManager.sddm = {
+        enable = true;
+        wayland.enable = true;
+        theme = "rose-pine";
+      };
     };
-
   };
-};
 
   environment.sessionVariables = {
-    PYENV_ROOT="$HOME/.pyenv";
+    PYENV_ROOT = "$HOME/.pyenv";
     # pyenv flags to be able to install Python
-    CPPFLAGS="-I${pkgs.zlib.dev}/include -I${pkgs.libffi.dev}/include -I${pkgs.readline.dev}/include -I${pkgs.bzip2.dev}/include -I${pkgs.openssl.dev}/include";
-    CXXFLAGS="-I${pkgs.zlib.dev}/include -I${pkgs.libffi.dev}/include -I${pkgs.readline.dev}/include -I${pkgs.bzip2.dev}/include -I${pkgs.openssl.dev}/include";
-    CFLAGS="-I${pkgs.openssl.dev}/include";
-    LDFLAGS="-L${pkgs.zlib.out}/lib -L${pkgs.libffi.out}/lib -L${pkgs.readline.out}/lib -L${pkgs.bzip2.out}/lib -L${pkgs.openssl.out}/lib";
-    CONFIGURE_OPTS="-with-openssl=${pkgs.openssl.dev}";
-    PYENV_VIRTUALENV_DISABLE_PROMPT="1";
+    CPPFLAGS = "-I${pkgs.zlib.dev}/include -I${pkgs.libffi.dev}/include -I${pkgs.readline.dev}/include -I${pkgs.bzip2.dev}/include -I${pkgs.openssl.dev}/include";
+    CXXFLAGS = "-I${pkgs.zlib.dev}/include -I${pkgs.libffi.dev}/include -I${pkgs.readline.dev}/include -I${pkgs.bzip2.dev}/include -I${pkgs.openssl.dev}/include";
+    CFLAGS = "-I${pkgs.openssl.dev}/include";
+    LDFLAGS = "-L${pkgs.zlib.out}/lib -L${pkgs.libffi.out}/lib -L${pkgs.readline.out}/lib -L${pkgs.bzip2.out}/lib -L${pkgs.openssl.out}/lib";
+    CONFIGURE_OPTS = "-with-openssl=${pkgs.openssl.dev}";
+    PYENV_VIRTUALENV_DISABLE_PROMPT = "1";
   };
   # Bootloader.
   #boot.loader.systemd-boot.enable = true;
@@ -71,7 +68,6 @@
   #];
 
   # Enable the X11 windowing system.
-  
 
   security.pam.services.swaylock = {
     text = ''
@@ -80,19 +76,19 @@
   };
 
   virtualisation = {
-        libvirtd = {
-            enable = true;
-            onBoot = "ignore";
-            qemu = {
-             package = pkgs.qemu_kvm;
-                ovmf.enable = true;
-                runAsRoot = false;
-                swtpm.enable = true;
-            };
-        };
+    libvirtd = {
+      enable = true;
+      onBoot = "ignore";
+      qemu = {
+        package = pkgs.qemu_kvm;
+        ovmf.enable = true;
+        runAsRoot = false;
+        swtpm.enable = true;
+      };
     };
+  };
 
-    networking.firewall.trustedInterfaces = [ "virbr0" ];
+  networking.firewall.trustedInterfaces = ["virbr0"];
 
   #doesnt work with hyprland
   #services.xserver.displayManager.lightdm = {
@@ -186,12 +182,11 @@
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-   networking.firewall.enable = true;
-   
-   hardware.bluetooth = {
+  networking.firewall.enable = true;
+
+  hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
-
   };
 
   services.blueman.enable = true;
