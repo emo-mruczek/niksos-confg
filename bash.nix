@@ -11,6 +11,8 @@
       sn = "shutdown now";
       gp = "git pull";
       sus = "systemctl suspend";
+      kik = "sudo openconnect --protocol=gp vpn.student.pwr.edu.pl -b";
+      slu = "systemctl --user restart pipewire";
     };
     initExtra = ''
       gg () {

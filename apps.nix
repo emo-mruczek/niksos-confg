@@ -3,20 +3,16 @@
     p3x-onenote
     blueman
     mangohud
-    superTuxKart
     vpcs
     #    ciscoPacketTracer8
-    legendary-gl
     heroic
     qemu
-    firefox
     kate
     librewolf
     signal-desktop
     steam
     protonup-qt
     gimp
-    thunderbird
     libreoffice-qt
     dwarf-fortress
     hollywood
@@ -33,11 +29,12 @@
    gcc-arm-embedded-10
    syncthing
    prismlauncher
-    logisim-evolution
-    kicad-small
     keepassxc
-
-
+    openconnect
+    subversionClient
+    texliveFull
+    asciinema
+    
 #pkgsCross.arm-embedded.buildPackages.gdb
   ];
 }

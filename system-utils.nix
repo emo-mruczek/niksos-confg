@@ -25,6 +25,7 @@
     zip
     git
     neofetch
+    fastfetch
     kitty
     haveged # entropy
     wireshark
@@ -66,8 +67,10 @@
 
     libffi
     readline
+
     bzip2
     ncurses
-
+ncdu
+    mpd
   ];
 }

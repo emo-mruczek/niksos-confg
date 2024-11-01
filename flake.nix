@@ -45,7 +45,8 @@
           ./system-utils.nix
           ./timezone.nix
           ./hyprland.nix
-	  ./nvf.nix
+	        ./nvf.nix
+          ./kanata.nix
 
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;

@@ -4,7 +4,7 @@
     sbcl
     smlnj
     astyle
-    #    julia
+    julia
     ghc
     gnumake
     gnat
@@ -24,5 +24,6 @@
     gdb
     valgrind
     flex
+    ncurses
   ];
 }

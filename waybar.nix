@@ -10,7 +10,7 @@
         passthrough = false;
         fixed-center = true;
         modules-left = ["hyprland/workspaces" "hyprland/mode" "hyprland/taskbar"];
-        modules-center = ["hyprland/window" "custom/hello-from-waybar"];
+        modules-center = ["hyprland/window" "custom/hello-from-waybar" "custom/media"];
         modules-right = ["cpu" "temperature" "pulseaudio" "clock" "clock#simpleclock" "battery" "tray" "custom/power"];
 
         "custom/hello-from-waybar" = {
@@ -82,6 +82,12 @@
           on-click = "wlogout -p layer-shell &";
           format = "⏻ ";
         };
+        "custom/media" = {
+          format = "󰝚 {}";
+          format-stopped = "󰝚 Stopped";
+          on-click = "playerctl play-pause";
+          exec = "$HOME/.config/waybar/mediaplayer.py 2> /dev/null";
+        };
       };
     };
 
@@ -141,12 +147,12 @@
       #pulseaudio,
       #custom-logo,
       #custom-power,
-      #custom-spotify,
       #cpu,
       #tray,
       #memory,
       #temperature,
       #battery,
+      #custom-media,
       #window {
         min-height: 0;
         padding: 2px 10px;
