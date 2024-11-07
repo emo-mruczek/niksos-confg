@@ -1,4 +1,6 @@
-{pkgs, ...}: {
+{pkgs, inputs, nixpkgs-small, ...}:
+
+{
   environment.systemPackages = with pkgs; [
     p3x-onenote
     blueman
@@ -39,11 +41,16 @@
     krita
     android-studio
     openconnect
-    calibre
+    #calibre
     teams-for-linux
     texliveFull
     subversionClient
     asciinema
+    zathura
+    mumble
+
+    
+    #inputs.nixpkgs-small.legacyPackages.x86_64-linux.calibre
 
     #pkgsCross.arm-embedded.buildPackages.gdb
   ];

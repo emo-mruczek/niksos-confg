@@ -4,7 +4,8 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     neovim-overlay.url = "github:nix-community/neovim-nightly-overlay";
-
+    nixpkgs-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
+  
     nvf = {
       url = "github:notashelf/nvf/main";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -21,12 +22,18 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
+    nixpkgs-small,
     ...
   } @ inputs: {
     nixosConfigurations = {
@@ -45,6 +52,7 @@
           ./timezone.nix
           ./hyprland.nix
           ./nvf.nix
+          ./spicetify.nix
 
           home-manager.nixosModules.home-manager
           {

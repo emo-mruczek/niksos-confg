@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+inputs,
   ...
 }: {
   imports = [
@@ -35,8 +36,9 @@
       xkbVariant = "";
       enable = true;
       displayManager.sddm = {
+        package = inputs.nixpkgs-small.legacyPackages.${pkgs.system}.kdePackages.sddm;
         enable = true;
-        wayland.enable = true;
+        wayland.enable = false;
         theme = "rose-pine";
       };
     };
@@ -127,6 +129,18 @@
   };
 
   users.groups.ubridge = {};
+
+  services.openssh.settings.KexAlgorithms = [
+    "ecdh-sha2-nistp521"
+  ];
+  services.openssh.enable = true;
+  programs.ssh.extraConfig = "
+    Host git.gay
+    HostName        git.gay
+    User            git
+    IdentityFile    ~/.ssh/gitgay
+    KexAlgorithms   ecdh-sha2-nistp521
+    ";
 
   security.wrappers.ubridge = {
     source = "/run/current-system/sw/bin/ubridge";

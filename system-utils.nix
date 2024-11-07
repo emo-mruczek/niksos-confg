@@ -54,7 +54,7 @@
     swww
     waybar
     wofi
-    mako
+    #mako
     grim
     slurp
     swaylock-effects
@@ -68,5 +68,8 @@
     readline
     bzip2
     ncurses
+    inotify-tools
+
+    curlpp
   ];
 }
