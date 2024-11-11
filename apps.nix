@@ -48,6 +48,7 @@
     asciinema
     zathura
     mumble
+    vesktop
 
     
     #inputs.nixpkgs-small.legacyPackages.x86_64-linux.calibre

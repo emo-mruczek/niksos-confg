@@ -36,9 +36,9 @@ inputs,
       xkbVariant = "";
       enable = true;
       displayManager.sddm = {
-        package = inputs.nixpkgs-small.legacyPackages.${pkgs.system}.kdePackages.sddm;
+        #        package = inputs.nixpkgs-small.legacyPackages.${pkgs.system}.kdePackages.sddm;
         enable = true;
-        wayland.enable = false;
+        wayland.enable = true;
         theme = "rose-pine";
       };
     };

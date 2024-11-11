@@ -25,6 +25,8 @@
     valgrind
     flex
     clang-tools
- gperftools
+    gperftools
+    cmake
+    gtest
   ];
 }

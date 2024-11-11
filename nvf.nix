@@ -34,7 +34,10 @@
       autopairs.enable = true;
 
       notes = {
-        todo-comments.enable = true;
+        todo-comments = {
+          enable = true;
+          setupOpts.highlight.pattern = ".*<(KEYWORDS)\s*";
+        };
       };
 
       utility = {
