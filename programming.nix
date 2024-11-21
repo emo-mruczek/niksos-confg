@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     gcc
+    stdmanpages
     sbcl
     smlnj
     astyle

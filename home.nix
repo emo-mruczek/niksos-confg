@@ -8,6 +8,7 @@
     ./swaylock.nix
     ./obs.nix
     ./dunst.nix
+    ./btop.nix
   ];
 
   home = {

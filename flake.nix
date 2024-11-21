@@ -7,7 +7,7 @@
     nixpkgs-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
   
     nvf = {
-      url = "github:notashelf/nvf/main";
+      url = "github:notashelf/nvf/v0.7";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.neovim-overlay.follows = "neovim-overlay";
     };

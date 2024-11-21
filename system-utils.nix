@@ -19,7 +19,6 @@
     gparted
     inxi
     hashcat
-    btop
     mesa-demos # demos for 3D
     unzip
     zip

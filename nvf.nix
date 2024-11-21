@@ -31,7 +31,8 @@
 
       telescope.enable = true;
 
-      autopairs.enable = true;
+      #autopairs.enable = true;
+      autopairs.nvim-autopairs.enable = true;
 
       notes = {
         todo-comments = {
@@ -91,8 +92,9 @@
       };
 
       autocomplete = {
-        enable = true;
-        alwaysComplete = false;
+        # enable = true;
+        #  alwaysComplete = false;
+        nvim-cmp.enable = true;
       };
 
       ui = {
@@ -100,7 +102,7 @@
       };
 
       visuals = {
-        enable = true;
+        #   enable = true;
         indentBlankline = {
           enable = true;
           #          eolChar = null;
