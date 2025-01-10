@@ -10,6 +10,7 @@
       gp = "git pull";
       sus = "systemctl suspend";
       fuck = "nix flake update";
+      ass = "add";
     };
     initExtra = ''
       gg () {

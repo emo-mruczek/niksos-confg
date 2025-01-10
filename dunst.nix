@@ -12,6 +12,7 @@
     };
     settings = {
       global = {
+        layer = "top";
         width = 300;
         offset = "5x5";
         progress_bar_min_width = 280;

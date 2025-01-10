@@ -23,6 +23,7 @@
       name = "Afterglow-Recolored-Joris-v2";
       size = 24;
       gtk.enable = true;
+      x11.enable = true;
     };
 
     stateVersion = "23.11";

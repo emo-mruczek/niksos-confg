@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     gcc
+    ninja
     stdmanpages
     sbcl
     smlnj
@@ -29,5 +30,6 @@
     gperftools
     cmake
     gtest
+    gfortran
   ];
 }

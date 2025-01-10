@@ -88,6 +88,7 @@ inputs,
         swtpm.enable = true;
       };
     };
+    docker.enable = true;
   };
 
   networking.firewall.trustedInterfaces = ["virbr0"];
@@ -160,12 +161,13 @@ inputs,
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
     noto-fonts-emoji
+    nerd-fonts.jetbrains-mono
 
-    (nerdfonts.override {
-      fonts = [
-        "JetBrainsMono"
-      ];
-    })
+    # (nerdfonts.override {
+    #  fonts = [
+    #    "JetBrainsMono"
+    #  ];
+    #})
   ];
 
   # Allow unfree packages
@@ -174,6 +176,13 @@ inputs,
       "electron-25.9.0"
     ];
     allowUnfree = true;
+  };
+
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d";
+    flake = "/home/felix/niksos-confg/"; #todo
   };
 
   # List packages installed in system profile. To search, run:

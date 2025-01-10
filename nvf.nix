@@ -18,11 +18,17 @@
         vimtex.package = pkgs.vimPlugins.vimtex; 
       };
 
+      options = {
+      # not sure of the numbers
+        tabstop = 8;
+        shiftwidth = 4;
+      };
+
       viAlias = false;
       vimAlias = false;
       enableLuaLoader = true;
       preventJunkFiles = true;
-      tabWidth = 4;
+      #tabWidth = 4;
       autoIndent = true;
       cmdHeight = 1;
       useSystemClipboard = true;
