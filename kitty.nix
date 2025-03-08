@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.kitty = {
     enable = true;
-    theme = "Rosé Pine";
+    themeFile = "rose-pine";
     font = {
       size = 15;
       name = "";

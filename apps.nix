@@ -12,7 +12,7 @@
     heroic
     qemu
     firefox
-    kate
+    kdePackages.kate
     librewolf
     signal-desktop
     steam
@@ -23,8 +23,7 @@
     hollywood
     cbonsai
     cmatrix
-    kate
-    dolphin
+    kdePackages.dolphin
     obsidian
     wineWowPackages.waylandFull
     osu-lazer-bin
@@ -34,11 +33,8 @@
     gcc-arm-embedded-10
     syncthing
     prismlauncher
-    logisim-evolution
-    kicad-small
     keepassxc
     krita
-    android-studio
     openconnect
     #calibre
     teams-for-linux
@@ -48,7 +44,6 @@
     zathura
     mumble
     vesktop
-
     
     #inputs.nixpkgs-small.legacyPackages.x86_64-linux.calibre
 

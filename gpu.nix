@@ -7,7 +7,11 @@
   environment.systemPackages = with pkgs; [];
 
   # Some shit for nvidia that i need to take care of
-  hardware.opengl.extraPackages = with pkgs; [];
+  hardware.graphics = {
+    extraPackages = with pkgs; [];
+    enable = true;
+    enable32Bit = true;
+  };
 
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
   #hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
@@ -36,10 +40,4 @@
   hardware.nvidia.open = true;
   hardware.nvidia.nvidiaSettings = true;
   hardware.nvidia.powerManagement.enable = true;
-
-  hardware.opengl = {
-    enable = true;
-    #    driSupport = true;
-    driSupport32Bit = true;
-  };
 }

@@ -2,8 +2,7 @@
 {
   stdenv,
   fetchFromGitHub,
-}: {
-  sddm-rose-pine = stdenv.mkDerivation rec {
+}: stdenv.mkDerivation {
     pname = "sddm-rose-pine";
     version = "1.2";
 
@@ -20,5 +19,4 @@
       mkdir -p $out/share/sddm/themes
       cp -aR $src $out/share/sddm/themes/rose-pine
     '';
-  };
 }

@@ -3,13 +3,11 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    neovim-overlay.url = "github:nix-community/neovim-nightly-overlay";
     nixpkgs-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
   
     nvf = {
       url = "github:notashelf/nvf/v0.7";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.neovim-overlay.follows = "neovim-overlay";
     };
 
     hyprland = {
@@ -53,6 +51,7 @@
           ./hyprland.nix
           ./nvf.nix
           ./spicetify.nix
+            #          ./kanata.nix
 
           home-manager.nixosModules.home-manager
           {

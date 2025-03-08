@@ -48,9 +48,9 @@
           tooltip = true;
           interval = 1;
         };
-        # "memory" = {
-        # format = " {used:0.2f}G";
-        # };
+         "memory" = {
+         format = " {used:0.2f}G";
+         };
         "battery" = {
           format = "{icon} {capacity}%";
           format-charging = " {capacity}%";

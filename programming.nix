@@ -15,14 +15,12 @@
     rocmPackages.rocgdb
     gnuplot_qt
     ruby
-    swiProlog
     jdk
     python311Packages.pip
     rustc
     cargo
     mono
     pyenv
-    qtcreator
     gdb
     valgrind
     flex

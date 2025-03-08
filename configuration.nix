@@ -26,22 +26,22 @@ inputs,
   };
 
   environment.systemPackages = with pkgs; [
-    (callPackage ./sddm-rose-pine.nix {}).sddm-rose-pine
+    (callPackage ./sddm-rose-pine.nix {})
     #(callPackage ./packettracer.nix {inherit (pkgs) stdenv;}).packettracer
   ];
 
   services = {
     xserver = {
-      layout = "pl";
-      xkbVariant = "";
+      xkb.layout = "pl";
+      xkb.variant = "";
       enable = true;
-      displayManager.sddm = {
+    };
+    displayManager.sddm = {
         #        package = inputs.nixpkgs-small.legacyPackages.${pkgs.system}.kdePackages.sddm;
         enable = true;
         wayland.enable = true;
         theme = "rose-pine";
       };
-    };
   };
 
   environment.sessionVariables = {
@@ -118,7 +118,7 @@ inputs,
     openFirewall = true;
   };
   # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.felix = {
@@ -131,9 +131,6 @@ inputs,
 
   users.groups.ubridge = {};
 
-  services.openssh.settings.KexAlgorithms = [
-    "ecdh-sha2-nistp521"
-  ];
   services.openssh.enable = true;
   programs.ssh.extraConfig = "
     Host git.gay
@@ -141,6 +138,11 @@ inputs,
     User            git
     IdentityFile    ~/.ssh/gitgay
     KexAlgorithms   ecdh-sha2-nistp521
+
+    Host github.com
+    HostName        github.com
+    User            git
+    IdentityFile    ~/.ssh/github
     ";
 
   security.wrappers.ubridge = {
@@ -153,7 +155,8 @@ inputs,
 
   nix.settings.trusted-users = ["root" "felix"];
 
-  fonts.packages = with pkgs; [
+  fonts = {
+    packages = with pkgs; [
     # font-awesome_5
     #font-awesome_4
     # material-design-icons
@@ -162,13 +165,22 @@ inputs,
     noto-fonts-cjk-serif
     noto-fonts-emoji
     nerd-fonts.jetbrains-mono
+    #corefonts
+    (callPackage ./product-sans.nix {})
 
     # (nerdfonts.override {
     #  fonts = [
     #    "JetBrainsMono"
     #  ];
     #})
-  ];
+    ];
+
+    fontconfig = {
+      defaultFonts = {
+        sansSerif = [ "Google Sans" ];
+      };
+    };
+  };
 
   # Allow unfree packages
   nixpkgs.config = {

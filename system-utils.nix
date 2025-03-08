@@ -34,7 +34,6 @@
     pavucontrol
     networkmanagerapplet
     pkg-configUpstream
-    openssl_3_3
     lshw
     zip
     unrar
@@ -55,6 +54,8 @@
     wofi
     #mako
     grim
+    grimblast
+    satty
     slurp
     swaylock-effects
 

@@ -22,6 +22,9 @@
       # not sure of the numbers
         tabstop = 8;
         shiftwidth = 4;
+        cmdheight = 1;
+        mouse = "a";
+        autoindent = true;
       };
 
       viAlias = false;
@@ -29,10 +32,8 @@
       enableLuaLoader = true;
       preventJunkFiles = true;
       #tabWidth = 4;
-      autoIndent = true;
-      cmdHeight = 1;
+      
       useSystemClipboard = true;
-      mouseSupport = "a";
       scrollOffset = 6;
 
       telescope.enable = true;
@@ -109,7 +110,7 @@
 
       visuals = {
         #   enable = true;
-        indentBlankline = {
+        indent-blankline = {
           enable = true;
           #          eolChar = null;
           #fillChar = null;
