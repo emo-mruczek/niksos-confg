@@ -181,6 +181,8 @@
         html = {
           enable = true;
         };
+        haskell.enable = true;
+        go.enable = true;
       };
     };
   };

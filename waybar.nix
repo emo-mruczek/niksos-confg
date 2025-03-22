@@ -10,8 +10,9 @@
         passthrough = false;
         fixed-center = true;
         modules-left = ["hyprland/workspaces" "hyprland/mode" "hyprland/taskbar"];
-        modules-center = ["hyprland/window" "custom/hello-from-waybar"];
-        modules-right = ["cpu" "temperature" "pulseaudio" "clock" "clock#simpleclock" "battery" "tray" "custom/power"];
+        modules-center = ["hyprland/window" "custom/hello-from-waybar" "mpris"];
+        modules-right = ["memory" "cpu" "temperature" "pulseaudio" "clock" "clock#simpleclock" "battery" "tray" "custom/power"];
+        
 
         "custom/hello-from-waybar" = {
           format = "{}";
@@ -49,17 +50,19 @@
           interval = 1;
         };
          "memory" = {
-         format = " {used:0.2f}G";
-         };
+         format = "  {used:0.2f}G";
+         interval = 1;
+        };
         "battery" = {
-          format = "{icon} {capacity}%";
+          format = "{icon} {capacity}% {power:0.2f}W";
           format-charging = " {capacity}%";
           format-plugged = " {capacity}%";
           format-icons = ["󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰁹"];
+          interval = 1;
         };
         "pulseaudio" = {
           format = "{icon} {volume}%";
-          format-muted = "  muted";
+          format-muted = " ";
           format-icons = {
             headphone = " ";
             phone = "";
@@ -81,6 +84,17 @@
           tooltip = false;
           on-click = "wlogout -p layer-shell &";
           format = "⏻ ";
+        };
+        "mpris" = {
+          interval = 1;
+          format = "{player_icon} {title} - {artist}";
+          format-paused = "{status_icon} {title} - {artist}";
+          player-icons = {
+            default = "󰽴";
+          };
+          status-icons = {
+            paused = "󰏤";
+          };
         };
       };
     };
@@ -141,12 +155,12 @@
       #pulseaudio,
       #custom-logo,
       #custom-power,
-      #custom-spotify,
       #cpu,
       #tray,
       #memory,
       #temperature,
       #battery,
+      #mpris,
       #window {
         min-height: 0;
         padding: 2px 10px;
@@ -208,6 +222,14 @@
         color: #f38ba8;
         padding-right: 5px;
         font-size: 14px;
+      }
+
+      #mpris {
+        color: #8d305a;
+      }
+
+      #custom-hello-from-waybar {
+        color: #97cf30;
       }
 
       @keyframes blink {

@@ -20,8 +20,10 @@
 
     pointerCursor = {
       package = pkgs.afterglow-cursors-recolored;
-      name = "Afterglow-Recolored-Joris-v2";
-      size = 24;
+      name = "Afterglow-Recolored-Catppuccin-Mauve";
+      # package = pkgs.bibata-cursors;
+      #name = "Bibata-Modern-Classic";
+      size = 32;
       gtk.enable = true;
       x11.enable = true;
     };

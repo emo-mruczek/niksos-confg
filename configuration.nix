@@ -29,6 +29,7 @@ inputs,
     (callPackage ./sddm-rose-pine.nix {})
     #(callPackage ./packettracer.nix {inherit (pkgs) stdenv;}).packettracer
   ];
+  
 
   services = {
     xserver = {
@@ -42,6 +43,7 @@ inputs,
         wayland.enable = true;
         theme = "rose-pine";
       };
+    playerctld.enable = true;
   };
 
   environment.sessionVariables = {
@@ -193,7 +195,7 @@ inputs,
   programs.nh = {
     enable = true;
     clean.enable = true;
-    clean.extraArgs = "--keep-since 4d";
+    clean.extraArgs = "--keep-since 7d";
     flake = "/home/felix/niksos-confg/"; #todo
   };
 
