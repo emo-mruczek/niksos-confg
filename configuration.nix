@@ -1,7 +1,7 @@
 {
   config,
   pkgs,
-inputs,
+  inputs,
   ...
 }: {
   imports = [
@@ -29,7 +29,6 @@ inputs,
     (callPackage ./sddm-rose-pine.nix {})
     #(callPackage ./packettracer.nix {inherit (pkgs) stdenv;}).packettracer
   ];
-  
 
   services = {
     xserver = {
@@ -38,11 +37,11 @@ inputs,
       enable = true;
     };
     displayManager.sddm = {
-        #        package = inputs.nixpkgs-small.legacyPackages.${pkgs.system}.kdePackages.sddm;
-        enable = true;
-        wayland.enable = true;
-        theme = "rose-pine";
-      };
+      #        package = inputs.nixpkgs-small.legacyPackages.${pkgs.system}.kdePackages.sddm;
+      enable = true;
+      wayland.enable = true;
+      theme = "rose-pine";
+    };
     playerctld.enable = true;
   };
 
@@ -134,18 +133,18 @@ inputs,
   users.groups.ubridge = {};
 
   services.openssh.enable = true;
-  programs.ssh.extraConfig = "
-    Host git.gay
-    HostName        git.gay
-    User            git
-    IdentityFile    ~/.ssh/gitgay
-    KexAlgorithms   ecdh-sha2-nistp521
+  #  programs.ssh.extraConfig = "
+  # Host git.gay
+  # HostName        git.gay
+  # User            git
+  # IdentityFile    ~/.ssh/gitgay
+  # KexAlgorithms   ecdh-sha2-nistp521
 
-    Host github.com
-    HostName        github.com
-    User            git
-    IdentityFile    ~/.ssh/github
-    ";
+  # Host github.com
+  # HostName        github.com
+  # User            git
+  # IdentityFile    ~/.ssh/github
+  # ";
 
   security.wrappers.ubridge = {
     source = "/run/current-system/sw/bin/ubridge";
@@ -159,27 +158,27 @@ inputs,
 
   fonts = {
     packages = with pkgs; [
-    # font-awesome_5
-    #font-awesome_4
-    # material-design-icons
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-cjk-serif
-    noto-fonts-emoji
-    nerd-fonts.jetbrains-mono
-    #corefonts
-    (callPackage ./product-sans.nix {})
+      # font-awesome_5
+      #font-awesome_4
+      # material-design-icons
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-cjk-serif
+      noto-fonts-emoji
+      nerd-fonts.jetbrains-mono
+      #corefonts
+      (callPackage ./product-sans.nix {})
 
-    # (nerdfonts.override {
-    #  fonts = [
-    #    "JetBrainsMono"
-    #  ];
-    #})
+      # (nerdfonts.override {
+      #  fonts = [
+      #    "JetBrainsMono"
+      #  ];
+      #})
     ];
 
     fontconfig = {
       defaultFonts = {
-        sansSerif = [ "Google Sans" ];
+        sansSerif = ["Google Sans"];
       };
     };
   };

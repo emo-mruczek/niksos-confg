@@ -1,6 +1,9 @@
-{pkgs, inputs, nixpkgs-small, ...}:
-
 {
+  pkgs,
+  inputs,
+  nixpkgs-small,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     p3x-onenote
     blueman
@@ -30,7 +33,7 @@
     protonplus
     stlink-tool
     stlink
-    gcc-arm-embedded-10
+    #gcc-arm-embedded-10
     syncthing
     prismlauncher
     keepassxc
@@ -44,7 +47,7 @@
     zathura
     mumble
     vesktop
-    
+
     #inputs.nixpkgs-small.legacyPackages.x86_64-linux.calibre
 
     #pkgsCross.arm-embedded.buildPackages.gdb

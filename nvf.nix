@@ -139,7 +139,7 @@
         enable = true;
         lspSignature.enable = true;
         lspconfig.enable = true;
-        lsplines.enable = true;
+                # lsplines.enable = true;
         mappings = {
           addWorkspaceFolder = "<leader>wa";
           codeAction = "<leader>a";

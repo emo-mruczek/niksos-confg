@@ -95,6 +95,9 @@
           status-icons = {
             paused = "󰏤";
           };
+          "ignored-players" = [
+            "firefox"
+          ];
         };
       };
     };

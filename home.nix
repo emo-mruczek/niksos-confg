@@ -23,7 +23,7 @@
       name = "Afterglow-Recolored-Catppuccin-Mauve";
       # package = pkgs.bibata-cursors;
       #name = "Bibata-Modern-Classic";
-      size = 32;
+      size = 40;
       gtk.enable = true;
       x11.enable = true;
     };
@@ -31,5 +31,11 @@
     stateVersion = "23.11";
   };
 
-  programs.home-manager.enable = true;
+  programs = {
+    home-manager.enable = true;
+    direnv = {
+      nix-direnv.enable = true;
+      enable = true;
+    };
+  };
 }
