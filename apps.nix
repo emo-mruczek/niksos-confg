@@ -47,6 +47,7 @@
     zathura
     mumble
     vesktop
+    qbittorrent-enhanced
 
     #inputs.nixpkgs-small.legacyPackages.x86_64-linux.calibre
 

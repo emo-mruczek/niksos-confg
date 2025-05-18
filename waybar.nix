@@ -12,13 +12,12 @@
         modules-left = ["hyprland/workspaces" "hyprland/mode" "hyprland/taskbar"];
         modules-center = ["hyprland/window" "custom/hello-from-waybar" "mpris"];
         modules-right = ["memory" "cpu" "temperature" "pulseaudio" "clock" "clock#simpleclock" "battery" "tray" "custom/power"];
-        
 
         "custom/hello-from-waybar" = {
           format = "{}";
           max-length = 40;
           interval = "once";
-          exec = pkgs.writeShellScript "hello-from-waybar" ''echo "OwO" '';
+          exec = pkgs.writeShellScript "hello-from-waybar" ''echo "całusy cipusy!" '';
         };
         "wlr/workspaces" = {
           on-click = "activate";
@@ -49,9 +48,9 @@
           tooltip = true;
           interval = 1;
         };
-         "memory" = {
-         format = "  {used:0.2f}G";
-         interval = 1;
+        "memory" = {
+          format = "  {used:0.2f}G";
+          interval = 1;
         };
         "battery" = {
           format = "{icon} {capacity}% {power:0.2f}W";

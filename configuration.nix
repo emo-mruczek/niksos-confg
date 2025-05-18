@@ -191,12 +191,12 @@
     allowUnfree = true;
   };
 
-  programs.nh = {
+  /*programs.nh = {
     enable = true;
     clean.enable = true;
     clean.extraArgs = "--keep-since 7d";
     flake = "/home/felix/niksos-confg/"; #todo
-  };
+  };*/
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -226,6 +226,9 @@
   };
 
   services.blueman.enable = true;
+
+  services.mullvad-vpn.enable = true;
+  services.mullvad-vpn.package = pkgs.mullvad-vpn;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

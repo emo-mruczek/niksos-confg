@@ -13,6 +13,9 @@
 
     settings.vim = {
       # package = inputs.neovim-overlay.packages.${pkgs.system}.neovim;
+      # package = inputs.packages.${pkgs.system}.neovim-unwrapped;
+      #package = inputs.legacyPackages.${pkgs.system}.neovim-unwrapped;
+      package = pkgs.neovim-unwrapped;
 
       extraPlugins = { 
         vimtex.package = pkgs.vimPlugins.vimtex; 
@@ -25,6 +28,7 @@
         cmdheight = 1;
         mouse = "a";
         autoindent = true;
+        clipboard.registers = "";
       };
 
       viAlias = false;
@@ -33,7 +37,7 @@
       preventJunkFiles = true;
       #tabWidth = 4;
       
-      useSystemClipboard = true;
+      #useSystemClipboard = true;
       scrollOffset = 6;
 
       telescope.enable = true;
