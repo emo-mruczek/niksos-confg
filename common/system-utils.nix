@@ -71,5 +71,7 @@
     inotify-tools
 
     curlpp
+    opentabletdriver
+    
   ];
 }

@@ -54,4 +54,23 @@
       ring-wrong-color = "#eb6f92aa";
     };
   };
+    services.swayidle = {
+        enable = true;
+        events = [
+            { event = "before-sleep";
+              command = "${pkgs.swaylock}/bin/swaylock";
+            }
+        ];
+        timeouts = [
+            {
+                timeout = 290;
+                command = "${pkgs.dunst}/bin/dunstify 'Locking...'";
+            }
+            {
+                timeout = 300;
+                command = "${pkgs.swaylock}/bin/swaylock";
+            }
+        ];
+  };
+  
 }

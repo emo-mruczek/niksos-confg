@@ -17,7 +17,7 @@
           format = "{}";
           max-length = 40;
           interval = "once";
-          exec = pkgs.writeShellScript "hello-from-waybar" ''echo "całusy cipusy!" '';
+          exec = pkgs.writeShellScript "hello-from-waybar" ''echo "wesołego geja!" '';
         };
         "wlr/workspaces" = {
           on-click = "activate";
@@ -58,6 +58,9 @@
           format-plugged = " {capacity}%";
           format-icons = ["󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰁹"];
           interval = 1;
+          states = {
+            critical = 20;
+          };
         };
         "pulseaudio" = {
           format = "{icon} {volume}%";
@@ -169,6 +172,20 @@
         border-radius: 8px;
         margin: 4px 4px;
         background-color: #181825;
+      }
+
+      @keyframes blink {
+        to {
+            background-color: @red;
+        }
+      }
+
+      #battery.critical:not(.charging) {
+        animation-name: blink;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
       }
 
       #custom-sep {

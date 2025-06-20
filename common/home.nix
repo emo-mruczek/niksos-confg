@@ -9,6 +9,7 @@
     ./obs.nix
     ./dunst.nix
     ./btop.nix
+    ./batsignal.nix
   ];
 
   home = {

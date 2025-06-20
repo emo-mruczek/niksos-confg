@@ -28,13 +28,12 @@
     cmatrix
     kdePackages.dolphin
     obsidian
-    wineWowPackages.waylandFull
+        #wineWowPackages.waylandFull
     osu-lazer-bin
     protonplus
     stlink-tool
     stlink
     #gcc-arm-embedded-10
-    syncthing
     prismlauncher
     keepassxc
     krita
