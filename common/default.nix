@@ -11,6 +11,7 @@ _: {
         ./timezone.nix
         ./configuration.nix
         ./home-manager.nix
+        ./syncthing.nix
         # ./unstable.nix
     ];
 }
