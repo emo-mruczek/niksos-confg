@@ -9,8 +9,6 @@
   programs.nvf = {
     enable = true;
 
-    
-
     settings.vim = {
       package = pkgs.neovim-unwrapped;
 
@@ -29,6 +27,7 @@
         cmdheight = 1;
         mouse = "a";
         autoindent = true;
+        scrolloff = 6;
       };
 
       viAlias = false;
@@ -37,8 +36,7 @@
       preventJunkFiles = true;
       #tabWidth = 4;
       
-            # useSystemClipboard = true;
-      scrollOffset = 6;
+      # useSystemClipboard = true;
 
       telescope.enable = true;
 
@@ -124,7 +122,7 @@
 
       notify = {
         nvim-notify.enable = true;
-        nvim-notify.setupOpts.background_colour = "#000000";
+        nvim-notify.setupOpts.background_colour = "#000000"; # because somethings broken
       };
 
       terminal.toggleterm = {
@@ -168,7 +166,6 @@
         enableDAP = true;
         enableExtraDiagnostics = true;
         enableFormat = true;
-        enableLSP = true;
         enableTreesitter = true;
         bash.enable = true;
         clang = {

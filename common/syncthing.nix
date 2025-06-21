@@ -4,10 +4,9 @@ _ : {
         openDefaultPorts = true;
         #configDir = "/home/felix/.config/syncthing";
 
-        declarative = {
             overrideDevices = true;
             overrideFolders = true;
-
+        settings = {
             devices = {
                 "izolda" = { id = "MXIOLE6-2TI3YMA-7ZWL3X5-6E277K5-VAVJ73I-6PR63SQ-XUIMZOU-5LKYSAA"; };
                 # "izaura" = { id = ""; };
