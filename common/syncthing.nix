@@ -34,6 +34,26 @@ _ : {
                     path = "/home/felix/.local/share/osu/client-realm";
                     deviced = [ "izolda" ];
                 };
+                "projects" = {
+                    path = "/home/felix/prjcts";
+                    device = [ "izolda" ];
+                    versioning = {
+                        type = "simple";
+                        params = {
+                            keep = "5";
+                        };
+                    };
+                };
+                "studia" = {
+                    path = "/home/felix/studia";
+                    device = [ "izolda" ];
+                    versioning = {
+                        type = "simple";
+                        params = {
+                            keep = "5";
+                        };
+                    };
+                };
             };
         };
     };

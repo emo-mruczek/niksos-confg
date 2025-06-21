@@ -3,7 +3,7 @@
     enable = true;
     enableCompletion = true;
     shellAliases = {
-      u = "nixos-rebuild switch --flake \"/home/felix/niksos-confg\" -L --use-remote-sudo";
+      u = "nixos-rebuild switch --flake \"/home/felix/niksos-confg\" -L --sudo";
       t = "trash -v";
       n = "nvim";
       sn = "shutdown now";
