@@ -1,4 +1,4 @@
-_ : {
+_: {
   networking = {
     hostName = "izaura";
     networkmanager.enable = true;

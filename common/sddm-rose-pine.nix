@@ -2,21 +2,22 @@
 {
   stdenv,
   fetchFromGitHub,
-}: stdenv.mkDerivation {
-    pname = "sddm-rose-pine";
-    version = "1.2";
+}:
+stdenv.mkDerivation {
+  pname = "sddm-rose-pine";
+  version = "1.2";
 
-    src = fetchFromGitHub {
-      owner = "lwndhrst";
-      repo = "sddm-rose-pine";
-      rev = "e8735051bf4a418efaf076f52cb3d7873ccd1509";
-      sha256 = "9F+TOWqc88D9+OqQnXlaghBf1z/89XYforFspqbste0=";
-    };
+  src = fetchFromGitHub {
+    owner = "lwndhrst";
+    repo = "sddm-rose-pine";
+    rev = "e8735051bf4a418efaf076f52cb3d7873ccd1509";
+    sha256 = "9F+TOWqc88D9+OqQnXlaghBf1z/89XYforFspqbste0=";
+  };
 
-    dontBuild = true;
+  dontBuild = true;
 
-    installPhase = ''
-      mkdir -p $out/share/sddm/themes
-      cp -aR $src $out/share/sddm/themes/rose-pine
-    '';
+  installPhase = ''
+    mkdir -p $out/share/sddm/themes
+    cp -aR $src $out/share/sddm/themes/rose-pine
+  '';
 }

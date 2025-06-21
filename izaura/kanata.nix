@@ -1,4 +1,8 @@
-{ pkgs, lib, ... }: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   environment.systemPackages = with pkgs; [kanata];
 
   services.kanata = {
@@ -7,5 +11,4 @@
       izolda.configFile = ./kolemak.kbd;
     };
   };
- 
 }

@@ -4,7 +4,6 @@
   inputs,
   ...
 }: {
-
   # Enabling flakes
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -18,9 +17,8 @@
 
   environment.systemPackages = with pkgs; [
     (callPackage ./sddm-rose-pine.nix {})
-        wineWowPackages.stable
-        winetricks
-
+    wineWowPackages.stable
+    winetricks
 
     #(callPackage ./packettracer.nix {inherit (pkgs) stdenv;}).packettracer
   ];
@@ -38,13 +36,12 @@
       theme = "rose-pine";
     };
     playerctld.enable = true;
-};
+  };
 
-hardware.opentabletdriver = {
-        enable = true;
-        daemon.enable = true;
-    };
-
+  hardware.opentabletdriver = {
+    enable = true;
+    daemon.enable = true;
+  };
 
   #   # pyenv flags to be able to install Python
   #   CPPFLAGS = "-I${pkgs.zlib.dev}/include -I${pkgs.libffi.dev}/include -I${pkgs.readline.dev}/include -I${pkgs.bzip2.dev}/include -I${pkgs.openssl.dev}/include";
@@ -71,7 +68,7 @@ hardware.opentabletdriver = {
 
   # Enable the X11 windowing system.
 
-   security.pam.services.swaylock = {
+  security.pam.services.swaylock = {
     text = ''
       auth include login
     '';
@@ -229,7 +226,7 @@ hardware.opentabletdriver = {
   services.mullvad-vpn.enable = true;
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
 
-    # This value determines the NixOS release from which the default
+  # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
   # this value at the release version of the first install of this system.

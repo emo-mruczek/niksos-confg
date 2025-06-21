@@ -5,23 +5,21 @@
 }: {
   imports = [inputs.nvf.nixosModules.default];
 
-
   programs.nvf = {
     enable = true;
 
     settings.vim = {
       package = pkgs.neovim-unwrapped;
 
-      extraPlugins = { 
-        vimtex.package = pkgs.vimPlugins.vimtex; 
+      extraPlugins = {
+        vimtex.package = pkgs.vimPlugins.vimtex;
         markview.package = pkgs.vimPlugins.markview-nvim;
       };
 
-      
       clipboard.registers = "unnamedplus";
 
       options = {
-      # not sure of the numbers
+        # not sure of the numbers
         tabstop = 8;
         shiftwidth = 4;
         cmdheight = 1;
@@ -35,7 +33,7 @@
       enableLuaLoader = true;
       preventJunkFiles = true;
       #tabWidth = 4;
-      
+
       # useSystemClipboard = true;
 
       telescope.enable = true;
@@ -142,7 +140,7 @@
         enable = true;
         lspSignature.enable = true;
         lspconfig.enable = true;
-                # lsplines.enable = true;
+        # lsplines.enable = true;
         mappings = {
           addWorkspaceFolder = "<leader>wa";
           codeAction = "<leader>a";
@@ -188,9 +186,4 @@
       };
     };
   };
-
- 
-
-
-
 }

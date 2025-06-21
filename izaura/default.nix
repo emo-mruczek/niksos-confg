@@ -1,6 +1,6 @@
-_ : {
-    imports = [
-        ./networking.nix
-        ./kanata.nix
-    ];
+_: {
+  imports = [
+    ./networking.nix
+    ./kanata.nix
+  ];
 }

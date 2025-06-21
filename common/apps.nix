@@ -28,7 +28,7 @@
     cmatrix
     kdePackages.dolphin
     obsidian
-        #wineWowPackages.waylandFull
+    #wineWowPackages.waylandFull
     osu-lazer-bin
     protonplus
     stlink-tool
@@ -47,6 +47,7 @@
     mumble
     vesktop
     qbittorrent-enhanced
+    vlc
 
     #inputs.nixpkgs-small.legacyPackages.x86_64-linux.calibre
 
