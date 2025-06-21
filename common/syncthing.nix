@@ -54,6 +54,16 @@ _ : {
                         };
                     };
                 };
+                "hypr" = {
+                    path = "/home/.config/hypr";
+                    device = [ "izolda" ];
+                    versioning = {
+                        type = "simple";
+                        params = {
+                            keep = "5";
+                        };
+                    };
+                };
             };
         };
     };
