@@ -1,10 +1,10 @@
 {
-  description = "Niksos flake VERY N00B DO NOT RECOMMEND";
+  description = "Im cooking this stuff with a help of poz (poz.pet)";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
-  
+
     nvf = {
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs-small";
@@ -20,7 +20,7 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -55,7 +55,6 @@
           home-manager.nixosModules.home-manager
         ];
       };
-
     };
   };
 }
