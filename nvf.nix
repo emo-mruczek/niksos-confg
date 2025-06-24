@@ -1,28 +1,46 @@
-{inputs, pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [inputs.nvf.nixosModules.default];
 
   programs.nvf = {
     enable = true;
 
     settings.vim = {
-# package = inputs.neovim-overlay.packages.${pkgs.system}.neovim;
+      # package = inputs.neovim-overlay.packages.${pkgs.system}.neovim;
+
+      extraPlugins = {
+        vimtex.package = pkgs.vimPlugins.vimtex;
+      };
+
+      options = {
+        # not sure of the numbers
+        tabstop = 8;
+        shiftwidth = 4;
+      };
+
       viAlias = false;
       vimAlias = false;
       enableLuaLoader = true;
       preventJunkFiles = true;
-      tabWidth = 4;
+      #tabWidth = 4;
       autoIndent = true;
       cmdHeight = 1;
-      useSystemClipboard = true;
       mouseSupport = "a";
       scrollOffset = 6;
 
       telescope.enable = true;
 
-      autopairs.enable = true;
+      #autopairs.enable = true;
+      autopairs.nvim-autopairs.enable = true;
 
       notes = {
-        todo-comments.enable = true;
+        todo-comments = {
+          enable = true;
+          setupOpts.highlight.pattern = ".*<(KEYWORDS)\s*";
+        };
       };
 
       utility = {
@@ -72,12 +90,13 @@
         context.enable = true;
         highlight.enable = true;
         indent.enable = true;
-        addDefaultGrammars = false; # cuz its broken rn
+        addDefaultGrammars = true;
       };
 
       autocomplete = {
-        enable = true;
-        alwaysComplete = false;
+        # enable = true;
+        #  alwaysComplete = false;
+        nvim-cmp.enable = true;
       };
 
       ui = {
@@ -85,7 +104,7 @@
       };
 
       visuals = {
-        enable = true;
+        #   enable = true;
         indentBlankline = {
           enable = true;
           #          eolChar = null;
@@ -115,7 +134,6 @@
         enable = true;
         lspSignature.enable = true;
         lspconfig.enable = true;
-        lsplines.enable = true;
         mappings = {
           addWorkspaceFolder = "<leader>wa";
           codeAction = "<leader>a";
@@ -153,6 +171,9 @@
         rust = {
           enable = true;
           crates.enable = true;
+        };
+        html = {
+          enable = true;
         };
       };
     };

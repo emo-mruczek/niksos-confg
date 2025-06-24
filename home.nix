@@ -7,6 +7,7 @@
     ./kitty.nix
     ./swaylock.nix
     ./obs.nix
+    ./dunst.nix
   ];
 
   home = {

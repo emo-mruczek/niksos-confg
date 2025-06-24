@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{config, pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     amdgpu_top
     parted
@@ -36,7 +36,7 @@
     pavucontrol
     networkmanagerapplet
     pkg-configUpstream
-    openssl_3_3
+        #openssl_3_3
     lshw
     zip
     unrar
@@ -55,10 +55,11 @@
     swww
     waybar
     wofi
-    mako
     grim
     slurp
     swaylock-effects
+    inotify-tools
+    zathura
 
     font-awesome_5
     line-awesome
@@ -70,7 +71,11 @@
 
     bzip2
     ncurses
-ncdu
+    ncdu
     mpd
+
+    piper
+        libratbag
+    config.boot.kernelPackages.cpupower
   ];
 }

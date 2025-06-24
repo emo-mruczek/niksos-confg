@@ -132,6 +132,7 @@
 
   nix.settings.trusted-users = ["root" "felix"];
 
+  
   fonts.packages = with pkgs; [
     # font-awesome_5
     #font-awesome_4
@@ -140,12 +141,13 @@
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
     noto-fonts-emoji
+    nerd-fonts.jetbrains-mono
 
-    (nerdfonts.override {
-      fonts = [
-        "JetBrainsMono"
-      ];
-    })
+    # (nerdfonts.override {
+    #  fonts = [
+    #    "JetBrainsMono"
+    #  ];
+    #})
   ];
 
   # Allow unfree packages
@@ -178,15 +180,15 @@
   # Or disable the firewall altogether.
    networking.firewall.enable = true;
    
-   hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-
-  };
-
   services.blueman.enable = true;
 
  
+    systemd.oomd = {
+        enable = true;
+        enableSystemSlice = true;
+        enableRootSlice = true;
+        enableUserSlices = true;
+    };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

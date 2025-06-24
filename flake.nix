@@ -21,6 +21,11 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
   };
 
@@ -47,6 +52,7 @@
           ./hyprland.nix
 	        ./nvf.nix
           ./kanata.nix
+          ./spicetify.nix
 
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
