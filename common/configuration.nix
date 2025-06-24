@@ -221,6 +221,13 @@
     powerOnBoot = true;
   };
 
+  systemd.oomd = {
+        enable = true;
+        enableSystemSlice = true;
+        enableRootSlice = true;
+        enableUserSlices = true;
+  }; 
+
   services.blueman.enable = true;
 
   services.mullvad-vpn.enable = true;

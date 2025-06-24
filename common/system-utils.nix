@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    fastfetch
     amdgpu_top
     parted
     flatpak-builder
@@ -8,10 +9,8 @@
     zlib
     powertop
     nix-prefetch-github
-    #    libsForQt5.qt5.qtquickcontrols2
     qt6.qt5compat
     kdePackages.qt5compat
-    #   sbclPackages.qtsvg
     libsForQt5.qt5.qtgraphicaleffects
     libsForQt5.full
     imv
@@ -72,5 +71,11 @@
 
     curlpp
     opentabletdriver
+    zathura
+    piper
+    libratbag
+        # config.boot.kernelPackages.cpupower
+    ncdu
+    mpd
   ];
 }

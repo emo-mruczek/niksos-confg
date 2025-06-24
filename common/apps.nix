@@ -1,7 +1,5 @@
 {
   pkgs,
-  inputs,
-  nixpkgs-small,
   ...
 }: {
   environment.systemPackages = with pkgs; [
@@ -10,7 +8,6 @@
     mangohud
     superTuxKart
     vpcs
-    #    ciscoPacketTracer8
     legendary-gl
     heroic
     qemu
@@ -28,18 +25,14 @@
     cmatrix
     kdePackages.dolphin
     obsidian
-    #wineWowPackages.waylandFull
     osu-lazer-bin
     protonplus
     stlink-tool
     stlink
-    #gcc-arm-embedded-10
     prismlauncher
     keepassxc
     krita
     openconnect
-    #calibre
-    teams-for-linux
     texliveFull
     subversionClient
     asciinema
@@ -48,9 +41,7 @@
     vesktop
     qbittorrent-enhanced
     vlc
-
-    #inputs.nixpkgs-small.legacyPackages.x86_64-linux.calibre
-
-    #pkgsCross.arm-embedded.buildPackages.gdb
-  ];
+    scrcpy
+    blahaj
+   ];
 }

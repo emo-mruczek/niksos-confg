@@ -6,15 +6,10 @@
     sbcl
     smlnj
     astyle
-    julia
-    ghc
     gnumake
-    gnat
     rocmPackages.llvm.clang-unwrapped
     python3
     rocmPackages.rocgdb
-    gnuplot_qt
-    ruby
     jdk
     python311Packages.pip
     rustc
@@ -23,11 +18,11 @@
     pyenv
     gdb
     valgrind
-    flex
     clang-tools
     gperftools
     cmake
     gtest
     gfortran
+    just
   ];
 }
