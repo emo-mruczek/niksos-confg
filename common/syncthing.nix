@@ -63,6 +63,10 @@ _: {
             };
           };
         };
+        "btop" = {
+            path = "/home/.config/themes";
+            device = ["izolda"];
+        };
       };
     };
   };

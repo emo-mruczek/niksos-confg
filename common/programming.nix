@@ -24,5 +24,6 @@
     gtest
     gfortran
     just
+    gcc-arm-embedded
   ];
 }
