@@ -43,5 +43,6 @@
     vlc
     scrcpy
     blahaj
-   ];
+    krita
+  ];
 }
