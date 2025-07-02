@@ -77,5 +77,7 @@
         # config.boot.kernelPackages.cpupower
     ncdu
     mpd
+    dust
+    fd
   ];
 }
