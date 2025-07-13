@@ -14,6 +14,7 @@
       extraPlugins = {
         vimtex.package = pkgs.vimPlugins.vimtex;
         markview.package = pkgs.vimPlugins.markview-nvim;
+        cheatsheet.package = pkgs.vimPlugins.cheatsheet-nvim;
       };
 
       clipboard.registers = "unnamedplus";
