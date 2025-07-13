@@ -67,9 +67,12 @@
             action = "<CMD>Neotree toggle<CR>";
             silent = true;
           };
-          "<leader>m" = {
-            action = "<CMD>MarkdownPreviewToggle<CR>";
-            silent = true;
+          # "<leader>m" = {
+          #   action = "<CMD>MarkdownPreviewToggle<CR>";
+          #   silent = true;
+          # };
+          "<leader>q" = {
+            action = "<CMD>Precognition toggle<CR>";
           };
         };
 
