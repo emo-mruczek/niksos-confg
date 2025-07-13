@@ -47,9 +47,11 @@
 
       utility = {
         surround.enable = true;
-        motion.precognition = {
-          enable = true;
-        };
+        motion.precognition.enable = true;
+      };
+
+      binds = {
+        whichKey.enable = true;
       };
 
       theme = {
