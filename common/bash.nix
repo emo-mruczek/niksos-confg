@@ -17,6 +17,9 @@
       feline = "cat";
       kik = "sudo openconnect --protocol=gp vpn.student.pwr.edu.pl -b";
       slu = "systemctl --user restart pipewire";
+      mnt = "udisksctl mount -b";
+      umnt = "udisksctl unmount -b";
+      ":q" = "exit";
     };
     initExtra = ''
       gg () {
