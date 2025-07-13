@@ -21,24 +21,21 @@
       options = {
         # not sure of the numbers
         tabstop = 8;
-        shiftwidth = 4;
+        shiftwidth = 2;
         cmdheight = 1;
         mouse = "a";
         autoindent = true;
         scrolloff = 6;
       };
-
+      
       viAlias = false;
       vimAlias = false;
       enableLuaLoader = true;
       preventJunkFiles = true;
-      #tabWidth = 4;
-
       # useSystemClipboard = true;
 
       telescope.enable = true;
 
-      #autopairs.enable = true;
       autopairs.nvim-autopairs.enable = true;
 
       notes = {
@@ -50,6 +47,9 @@
 
       utility = {
         surround.enable = true;
+        motion.precognition = {
+          enable = true;
+        };
       };
 
       theme = {
@@ -135,7 +135,7 @@
           enable = true;
         };
       };
-
+        
       lsp = {
         enable = true;
         lspSignature.enable = true;
@@ -170,7 +170,7 @@
           enable = true;
           cHeader = true;
         };
-        # markdown.enable = true;
+        markdown.enable = true;
         nix = {
           enable = true;
         };
