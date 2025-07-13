@@ -76,14 +76,6 @@
             action = "<CMD>Precognition toggle<CR>";
           };
         };
-
-        terminal = {
-          # get out of terminal mode in toggleterm
-          "<ESC>" = {
-            action = "<C-\\><C-n>";
-            silent = true;
-          };
-        };
       };
 
       filetree.neo-tree = {
@@ -127,12 +119,6 @@
       notify = {
         nvim-notify.enable = true;
         nvim-notify.setupOpts.background_colour = "#000000"; # because somethings broken
-      };
-
-      terminal.toggleterm = {
-        enable = true;
-        setupOpts.direction = "tab";
-        mappings.open = "<C-\\>";
       };
 
       git = {

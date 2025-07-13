@@ -17,7 +17,7 @@
           format = "{}";
           max-length = 40;
           interval = "once";
-          exec = pkgs.writeShellScript "hello-from-waybar" ''echo "wesołego geja!" '';
+          exec = pkgs.writeShellScript "hello-from-waybar" ''echo "Lord spod Wiaduktu" '';
         };
         "wlr/workspaces" = {
           on-click = "activate";

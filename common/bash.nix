@@ -30,6 +30,9 @@
       cht () {
         curl cheat.sh/$1
       }
+
+      source /home/felix/niksos-confg/common/scripts/fzf-bash-completion.sh 
+      bind -x '"\t": fzf_bash_completion'
     '';
   };
 }
