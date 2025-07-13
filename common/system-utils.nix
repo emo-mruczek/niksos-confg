@@ -1,5 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    file 
+    ripgrep
     fastfetch
     amdgpu_top
     parted

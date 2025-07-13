@@ -33,7 +33,7 @@
     keepassxc
     krita
     openconnect
-    texliveFull
+    # texliveFull
     subversionClient
     asciinema
     zathura

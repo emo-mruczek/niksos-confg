@@ -9,7 +9,7 @@
     gnumake
     rocmPackages.llvm.clang-unwrapped
     python3
-    rocmPackages.rocgdb
+    # rocmPackages.rocgdb
     jdk
     python311Packages.pip
     rustc
