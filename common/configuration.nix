@@ -13,24 +13,22 @@
     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
 
-  services.flatpak.enable = true;
-
   environment.systemPackages = with pkgs; [
     (callPackage ./sddm-rose-pine.nix {})
     wineWowPackages.stable
     winetricks
-
     #(callPackage ./packettracer.nix {inherit (pkgs) stdenv;}).packettracer
   ];
 
   services = {
+    udisks2.enable = true;
+    flatpak.enable = true;
     xserver = {
       xkb.layout = "pl";
       xkb.variant = "";
       enable = true;
     };
     displayManager.sddm = {
-      #        package = inputs.nixpkgs-small.legacyPackages.${pkgs.system}.kdePackages.sddm;
       enable = true;
       wayland.enable = true;
       theme = "rose-pine";
@@ -116,9 +114,9 @@
   };
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput = {
-        enable = true;
-        touchpad.tappingDragLock = false;
-    };
+    enable = true;
+    touchpad.tappingDragLock = false;
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.felix = {
@@ -225,11 +223,11 @@
   };
 
   systemd.oomd = {
-        enable = true;
-        enableSystemSlice = true;
-        enableRootSlice = true;
-        enableUserSlices = true;
-  }; 
+    enable = true;
+    enableSystemSlice = true;
+    enableRootSlice = true;
+    enableUserSlices = true;
+  };
 
   services.blueman.enable = true;
 
