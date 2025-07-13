@@ -23,9 +23,12 @@
     };
     initExtra = ''
       gg () {
-      git add .
-      git commit -m "$1"
-      git push
+        git add .
+        git commit -m "$1"
+        git push
+      }
+      cht () {
+        curl cheat.sh/$1
       }
     '';
   };
