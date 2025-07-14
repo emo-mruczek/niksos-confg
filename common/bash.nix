@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   programs.bash = {
     enable = true;
     enableCompletion = true;
@@ -31,7 +31,10 @@
         curl cheat.sh/$1
       }
 
-      source /home/felix/niksos-confg/common/scripts/fzf-bash-completion.sh 
+      source ${pkgs.fetchurl {
+        url = "https://raw.githubusercontent.com/lincheney/fzf-tab-completion/4850357beac6f8e37b66bd78ccf90008ea3de40b/bash/fzf-bash-completion.sh";
+        hash = "sha256-CvrgwkVcDBoIsb4CIJtPDdCE+Xw01EGNpfGpENzWvCw=";
+      }}
       bind -x '"\t": fzf_bash_completion'
     '';
   };

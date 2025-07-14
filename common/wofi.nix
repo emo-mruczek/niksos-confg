@@ -8,73 +8,67 @@
     settings = {
       location = "bottom-left";
       allow_markup = true;
-      width = 250;
+      width = 350;
     };
     style = ''
-              window {
-        margin: 0px;
-        border: 5px solid #111019;
-        background-color: rgba(11, 10, 16, 0.9);
-        border-radius: 15px;
+      window {
+          margin: 0px;
+          background-color: #232136;
+          border-radius: 10px;
+          border: 2px solid #eb6f92;
+          color: #e0def4;
+          font-family: 'Monofur Nerd Font';
+          font-size: 20px;
       }
 
       #input {
-        all: unset;
-        min-height: 36px;
-        padding: 4px 10px;
-        margin: 4px;
-        border: none;
-        color: #e2e0ec;
-        font-weight: bold;
-        background-color: #161420;
-        outline: none;
-        border-radius: 15px;
-        margin: 10px;
-        margin-bottom: 2px;
+          margin: 5px;
+          border-radius: 10px;
+          border: none;
+          border-radius: 10px;
+          color: #eb6f92;
+          background-color: #393552;
       }
 
       #inner-box {
-        margin: 4px;
-        padding: 10px;
-        font-weight: bold;
-        border-radius: 15px;
+          margin: 5px;
+          border: none;
+          background-color: #393552;
+          color: #232136;
+          border-radius: 10px;
       }
 
       #outer-box {
-        margin: 0px;
-        padding: 3px;
-        border: none;
-        border-radius: 15px;
-        border: 5px solid #111019;
+          margin: 15px;
+          border: none;
+          border-radius: 10px; 
+          background-color: #232136;
       }
 
       #scroll {
-        margin-top: 5px;
-        border: none;
-        border-radius: 15px;
-        margin-bottom: 5px;
+          margin: 0px;
+          border: none;
       }
 
-      #text:selected {
-        color: #f1f0f5;
-        margin: 0px 0px;
-        border: none;
-        border-radius: 15px;
-      }
-
-      #entry {
-        margin: 0px 0px;
-        border: none;
-        border-radius: 15px;
-        background-color: transparent;
-      }
+      #text {
+          margin: 5px;
+          border: none;
+          color: #e0def4;
+      } 
 
       #entry:selected {
-        margin: 0px 0px;
-        border: none;
-        border-radius: 15px;
-        background: linear-gradient(90deg, #E97193 0%, #74c7ec 100%);
+          background-color: #eb6f92;
+          color: #232136;
+          border-radius: 10px;;
+          outline: none;
       }
+
+      #entry:selected * {
+          background-color: #eb6f92;
+          color: #232136;
+          border-radius: 10px;;
+          outline: none;
+      }    
     '';
   };
 }

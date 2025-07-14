@@ -41,31 +41,6 @@
     daemon.enable = true;
   };
 
-  #   # pyenv flags to be able to install Python
-  #   CPPFLAGS = "-I${pkgs.zlib.dev}/include -I${pkgs.libffi.dev}/include -I${pkgs.readline.dev}/include -I${pkgs.bzip2.dev}/include -I${pkgs.openssl.dev}/include";
-  #   CXXFLAGS = "-I${pkgs.zlib.dev}/include -I${pkgs.libffi.dev}/include -I${pkgs.readline.dev}/include -I${pkgs.bzip2.dev}/include -I${pkgs.openssl.dev}/include";
-  #   CFLAGS = "-I${pkgs.openssl.dev}/include";
-  #   LDFLAGS = "-L${pkgs.zlib.out}/lib -L${pkgs.libffi.out}/lib -L${pkgs.readline.out}/lib -L${pkgs.bzip2.out}/lib -L${pkgs.openssl.out}/lib";
-  #   CONFIGURE_OPTS = "-with-openssl=${pkgs.openssl.dev}";
-  #   PYENV_VIRTUALENV_DISABLE_PROMPT = "1";
-  # };
-  # Bootloader.
-  #boot.loader.systemd-boot.enable = true;
-  #boot.loader.efi.canTouchEfiVariables = true;
-  #boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
-
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  #environment.systemPackages = let themes = pkgs.callPackage nixpkgs/pkgs/sddm-rose-pine.nix {}; in [
-  #  themes.sddm-rose-pine
-  #];
-
-  # Enable the X11 windowing system.
-
   security.pam.services.swaylock = {
     text = ''
       auth include login
@@ -88,21 +63,6 @@
 
   networking.firewall.trustedInterfaces = ["virbr0"];
 
-  #doesnt work with hyprland
-  #services.xserver.displayManager.lightdm = {
-  #  enable = true;
-  #};
-  #  services.xserver.displayManager.defaultSession = "hyprland";
-
-  #services.xserver.displayManager.sddm.wayland.enable = true;
-
-  # Enable the KDE Plasma Desktop Environment.
-  #  services.xserver.displayManager.sddm.enable = true;
-  # services.xserver.desktopManager.plasma5.enable = true;
-
-  # Configure keymap in X11
-
-  # Configure console keymap
   console.keyMap = "pl2";
 
   # Enable CUPS to print documents.
@@ -113,10 +73,10 @@
     openFirewall = true;
   };
   # Enable touchpad support (enabled default in most desktopManager).
-  services.libinput = {
-    enable = true;
-    touchpad.tappingDragLock = false;
-  };
+  # services.libinput = {
+  #   enable = true;
+  #   touchpad.tappingDragLock = false;
+  # };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.felix = {

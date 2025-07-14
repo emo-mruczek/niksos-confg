@@ -13,6 +13,8 @@
     hyprland = {
       type = "git";
       url = "https://github.com/hyprwm/Hyprland";
+      # TODOL: remove this after master start to work again
+      rev = "d0f58baf296a2cdd5df0f82212fe17dfbef8438e";
       submodules = true;
     };
 
