@@ -17,7 +17,7 @@
     signal-desktop
     steam
     protonup-qt
-    gimp
+    # gimp
     thunderbird
     libreoffice-qt
     hollywood
@@ -29,7 +29,7 @@
     protonplus
     stlink-tool
     stlink
-    prismlauncher
+    # prismlauncher
     keepassxc
     krita
     openconnect

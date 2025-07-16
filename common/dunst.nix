@@ -14,7 +14,7 @@
       global = {
         layer = "top";
         width = 300;
-        offset = "5x5";
+        offset = "20x20";
         progress_bar_min_width = 280;
         progress_bar_max_width = 280;
         progress_bar_corner_radius = 2;
@@ -25,7 +25,7 @@
         font = "Monospace 14";
         icon_theme = "rose-pine-icons";
         enable_recursive_icon_lookup = true;
-        corner_radius = 2;
+        corner_radius = 10;
         background = "#26233a";
         foreground = "#e0def4";
       };
