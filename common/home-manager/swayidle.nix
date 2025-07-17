@@ -1,4 +1,4 @@
-{lib, config, pkgs, ...}: {
+{lib, config, pkgs, inputs, ...}: {
     services.swayidle = {
     enable = true;
     timeouts = [
@@ -8,18 +8,24 @@
       }
       {
         timeout = 300;
-        command = lib.getExe config.programs.swaylock.package;
+        command = "${lib.getExe config.programs.swaylock.package} -f";
       }
       {
-        timeout = 299;
+        timeout = 400;
+        command = "${lib.getExe' inputs.hyprland.packages.${pkgs.system}.hyprland "hyprctl"} dispatch dpms off"; 
+        resumeCommand = "${lib.getExe' inputs.hyprland.packages.${pkgs.system}.hyprland "hyprctl"} dispatch dpms on"; 
+
+      }
+      {
+        timeout = 420;
         command = "${lib.getExe' pkgs.systemd "systemctl"} suspend";
       }
     ];
-    # events = [
-    #   {
-    #     event = "before-sleep";
-    #     command = lib.getExe config.programs.swaylock.package;
-    #   }
-    # ];
+    events = [
+      {
+        event = "before-sleep";
+        command = "${lib.getExe config.programs.swaylock.package} -f";
+      }
+    ];
   };
 }
