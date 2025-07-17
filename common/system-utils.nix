@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    attic-client
     file 
     ripgrep
     fastfetch

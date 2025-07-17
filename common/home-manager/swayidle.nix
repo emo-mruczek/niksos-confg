@@ -11,15 +11,15 @@
         command = lib.getExe config.programs.swaylock.package;
       }
       {
-        timeout = 30;
-        command = "systemctl suspend";
+        timeout = 299;
+        command = "${lib.getExe' pkgs.systemd "systemctl"} suspend";
       }
     ];
-    events = [
-      {
-        event = "before-sleep";
-        command = lib.getExe config.programs.swaylock.package;
-      }
-    ];
+    # events = [
+    #   {
+    #     event = "before-sleep";
+    #     command = lib.getExe config.programs.swaylock.package;
+    #   }
+    # ];
   };
 }

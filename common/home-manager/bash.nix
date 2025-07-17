@@ -4,7 +4,7 @@
     enableCompletion = true;
     shellAliases = {
       # u = "nixos-rebuild switch --flake \"/home/felix/niksos-confg\" -L --sudo";
-      u = "nh os switch";
+      u = "nh os switch -o result && attic push felix result";
       t = "trash -v";
       n = "nvim";
       sn = "shutdown now";
