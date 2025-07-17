@@ -13,8 +13,9 @@
     plymouth = {
       enable = true;
       # font = "${pkgs.jetbrains-mono}/share/fonts/truetype/JetBrainsMono-Regular.ttf";
-      themePackages = [pkgs.catppuccin-plymouth];
-      theme = "catppuccin-macchiato";
+      themePackages = [pkgs.catppuccin-plymouth pkgs.plymouth-blahaj-theme];
+      theme = "blahaj";
+      logo = pkgs.callPackage ./splash.nix {};
     };
 
     # Enable "Silent boot"
