@@ -1,2 +1,3 @@
 # niksos-confg
-niksos confing (very basic/init/n00b) 
+
+I've got really bored after the surgery and decided to plant some rice :3
