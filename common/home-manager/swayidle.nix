@@ -11,7 +11,7 @@
         command = lib.getExe config.programs.swaylock.package;
       }
       {
-        timeout = 360;
+        timeout = 30;
         command = "systemctl suspend";
       }
     ];

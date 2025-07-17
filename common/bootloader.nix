@@ -15,7 +15,7 @@
       # font = "${pkgs.jetbrains-mono}/share/fonts/truetype/JetBrainsMono-Regular.ttf";
       themePackages = [pkgs.catppuccin-plymouth pkgs.plymouth-blahaj-theme];
       theme = "blahaj";
-      logo = pkgs.callPackage ./splash.nix {};
+      logo = pkgs.callPackage ./packages/splash.nix {};
     };
 
     # Enable "Silent boot"
