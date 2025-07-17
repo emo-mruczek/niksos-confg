@@ -67,6 +67,10 @@ _: {
             path = "/home/.config/themes";
             device = ["izolda"];
         };
+        "librewolf" = {
+          path = "/home/felix/.librewolf";
+          device = ["izolda"];
+        };
       };
     };
   };

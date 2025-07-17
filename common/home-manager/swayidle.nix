@@ -24,7 +24,7 @@
     events = [
       {
         event = "before-sleep";
-        command = "${lib.getExe config.programs.swaylock.package} -f";
+        command = "${lib.getExe config.programs.swaylock.package} -f && playerctl pause";
       }
     ];
   };

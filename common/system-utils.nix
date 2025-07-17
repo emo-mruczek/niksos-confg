@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    sway-audio-idle-inhibit
     attic-client
     file 
     ripgrep
