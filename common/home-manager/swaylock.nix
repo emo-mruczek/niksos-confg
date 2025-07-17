@@ -7,7 +7,7 @@
       color = "232136";
 
       clock = true;
-      image = "~/niksos-confg/common/bigcat.jpg";
+      image = "~/niksos-confg/common/home-manager/assets/bigcat.jpg";
 
       indicator-x-position = "2075";
 

@@ -10,8 +10,8 @@ _: {
     ./system-utils.nix
     ./timezone.nix
     ./configuration.nix
-    ./home-manager.nix
     ./syncthing.nix
+    ./home-manager/default.nix
     # ./unstable.nix
   ];
 }
