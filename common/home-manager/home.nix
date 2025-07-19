@@ -32,8 +32,7 @@
     };
 
     stateVersion = "23.11";
-
-    file.".config/hypr/".source = config.lib.file.mkOutOfStoreSymlink ./hypr;
+    # file.".config/hypr/".source = config.lib.file.mkOutOfStoreSymlink ./hypr;
   };
 
   # programs = {

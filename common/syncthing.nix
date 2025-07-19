@@ -9,7 +9,7 @@ _: {
     settings = {
       devices = {
         "izolda" = {id = "MXIOLE6-2TI3YMA-7ZWL3X5-6E277K5-VAVJ73I-6PR63SQ-XUIMZOU-5LKYSAA";};
-        # "izaura" = { id = ""; };
+        "izaura" = { id = "V2DL6S3-ROGJMBA-ZMOMHCZ-VPARB35-OGB3PDY-LTSDSQ3-XWDWPAI-6Y3WMQL"; };
         # "klotylda" = { id = ""; };
         # "hiacynta" = { id = ""; };
       };
