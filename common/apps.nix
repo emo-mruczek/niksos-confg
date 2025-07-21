@@ -15,7 +15,6 @@
     kdePackages.kate
     librewolf
     signal-desktop
-    steam
     protonup-qt
     # gimp
     thunderbird

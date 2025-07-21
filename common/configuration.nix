@@ -13,6 +13,13 @@
     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" "felix:OKE38EUQKENVUouWyfCAJ9++9Fl0ObJMKCYDURm9aUM="];
   };
 
+  programs.steam = {
+    enable = true;
+    extraCompatPackages = with pkgs; [
+      proton-ge-bin
+    ];
+  };
+
   environment.systemPackages = with pkgs; [
     (callPackage ./sddm-rose-pine.nix {})
     wineWowPackages.stable
@@ -66,26 +73,26 @@
   console = {
     keyMap = "pl2";
     colors = [
-     "191724"
-     "eb6f92"
-     "31748f"
-     "f6c177"
-     "9ccfd8"
-     "c4a7e7"
-     "ebbcba"
-     "e0def4"
-     "6e6a86"
-     "eb6f92"
-     "31748f"
-     "f6c177"
-     "9ccfd8"
-     "c4a7e7"
-     "ebbcba"
-     "e0def4"
+      "191724"
+      "eb6f92"
+      "31748f"
+      "f6c177"
+      "9ccfd8"
+      "c4a7e7"
+      "ebbcba"
+      "e0def4"
+      "6e6a86"
+      "eb6f92"
+      "31748f"
+      "f6c177"
+      "9ccfd8"
+      "c4a7e7"
+      "ebbcba"
+      "e0def4"
     ];
     earlySetup = true;
   };
-  
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
   services.avahi = {
