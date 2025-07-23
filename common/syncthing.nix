@@ -11,7 +11,7 @@ _: {
     overrideFolders = false;
     settings = {
       devices = {
-        "izolda" = {id = "MXIOLE6-2TI3YMA-7ZWL3X5-6E277K5-VAVJ73I-6PR63SQ-XUIMZOU-5LKYSAA";};
+        "izolda" = {id = "34TTSGY-FQIRSXF-ZR5WGEW-RWOYUAA-UZ5B4DB-BGFJFW4-O7FR3VY-KAXJJQ7";};
         "izaura" = { id = "FDM4WPF-24HPMQB-NY7VM6S-LW3WDLT-NBBN2RO-AXGEKQA-KPOC3YZ-LXDH5Q4"; };
         # "klotylda" = { id = ""; };
         # "hiacynta" = { id = ""; };
