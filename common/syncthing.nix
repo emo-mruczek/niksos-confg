@@ -12,7 +12,7 @@ _: {
     settings = {
       devices = {
         "izolda" = {id = "34TTSGY-FQIRSXF-ZR5WGEW-RWOYUAA-UZ5B4DB-BGFJFW4-O7FR3VY-KAXJJQ7";};
-        "izaura" = { id = "FDM4WPF-24HPMQB-NY7VM6S-LW3WDLT-NBBN2RO-AXGEKQA-KPOC3YZ-LXDH5Q4"; };
+        "izaura" = {id = "FDM4WPF-24HPMQB-NY7VM6S-LW3WDLT-NBBN2RO-AXGEKQA-KPOC3YZ-LXDH5Q4";};
         # "klotylda" = { id = ""; };
         # "hiacynta" = { id = ""; };
       };
@@ -34,11 +34,11 @@ _: {
         };
         "osu-data" = {
           path = "/home/felix/.local/share/osu/client-realm";
-          deviced = ["izolda" "izaura"];
+          devices = ["izolda" "izaura"];
         };
         "projects" = {
           path = "/home/felix/prjcts";
-          device = ["izolda" "izaura"];
+          devices = ["izolda" "izaura"];
           versioning = {
             type = "simple";
             params = {
@@ -48,7 +48,7 @@ _: {
         };
         "studia" = {
           path = "/home/felix/studia";
-          device = ["izolda" "izaura"];
+          devices = ["izolda" "izaura"];
           versioning = {
             type = "simple";
             params = {
@@ -58,7 +58,7 @@ _: {
         };
         "hypr" = {
           path = "/home/felix/.config/hypr";
-          device = ["izolda" "izaura"];
+          devices = ["izolda" "izaura"];
           versioning = {
             type = "simple";
             params = {
@@ -68,11 +68,11 @@ _: {
         };
         "btop" = {
             path = "/home/felix/.config/btop/themes";
-            device = ["izolda" "izaura"];
+            devices = ["izolda" "izaura"];
         };
         "librewolf" = {
           path = "/home/felix/.librewolf";
-          device = ["izolda" "izaura"];
+          devices = ["izolda" "izaura"];
         };
       };
     };
