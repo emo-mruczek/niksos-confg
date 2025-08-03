@@ -29,11 +29,7 @@ _: {
           };
         };
         "osu-files" = {
-          path = "/home/felix/.local/share/osu/files";
-          devices = ["izolda" "izaura"];
-        };
-        "osu-data" = {
-          path = "/home/felix/.local/share/osu/client-realm";
+          path = "/home/felix/.local/share/osu";
           devices = ["izolda" "izaura"];
         };
         "projects" = {

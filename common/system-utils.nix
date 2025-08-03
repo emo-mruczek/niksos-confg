@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    magic-wormhole-rs
     sway-audio-idle-inhibit
     attic-client
     file 

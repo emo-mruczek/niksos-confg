@@ -5,7 +5,9 @@
   ...
 }: {
   # Enabling flakes
-
+  
+  security.sudo.package = pkgs.sudo.override { withInsults = true; };
+    
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   nix.settings = {
