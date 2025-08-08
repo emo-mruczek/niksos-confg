@@ -1,6 +1,6 @@
 {lib, config, pkgs, inputs, ...}: {
     services.swayidle = {
-    enable = true;
+    enable = false;
     timeouts = [
       { 
         timeout = 240;
