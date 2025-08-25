@@ -13,7 +13,6 @@
     ./lsd.nix
     ./direnv.nix
     ./fzf.nix
-    ./swayidle.nix
   ];
 
   home = {
