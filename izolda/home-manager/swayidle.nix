@@ -1,5 +1,4 @@
 {lib, config, pkgs, inputs,  ...}: {
-  home-manager.users.felix = {
     services.swayidle = {
     # enable = if (builtins.getEnv "HOSTNAME" == "izolda") then true else false;
     enable = true;
@@ -10,7 +9,7 @@
       }
       {
         timeout = 300;
-        command = "${lib.getExe config.home-manager.users.felix.programs.swaylock.package} -f";
+        command = "${lib.getExe config.programs.swaylock.package} -f";
       }
       {
         timeout = 400;
@@ -26,9 +25,8 @@
     events = [
       {
         event = "before-sleep";
-        command = "${lib.getExe config.home-manager.users.felix.programs.swaylock.package} -f && playerctl pause";
+        command = "${lib.getExe config.programs.swaylock.package} -f && playerctl pause";
       }
     ];
-  };
   };
 }
