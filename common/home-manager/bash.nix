@@ -21,6 +21,7 @@
       mnt = "udisksctl mount -b";
       umnt = "udisksctl unmount -b";
       ":q" = "exit";
+      kot = "cat";
     };
     initExtra = ''
       gg () {

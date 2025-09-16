@@ -28,7 +28,7 @@
     protonplus
     stlink-tool
     stlink
-    # prismlauncher
+    prismlauncher
     keepassxc
     krita
     openconnect
@@ -43,5 +43,9 @@
     scrcpy
     blahaj
     krita
+    lutris
+    geckodriver
+    gnome-disk-utility
+    nautilus
   ];
 }

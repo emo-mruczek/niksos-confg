@@ -25,5 +25,7 @@
     gfortran
     just
     gcc-arm-embedded
+    stm32cubemx
+    openocd
   ];
 }
