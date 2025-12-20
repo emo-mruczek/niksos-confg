@@ -5,6 +5,9 @@
   ...
 }: {
   # Enabling flakes
+
+  #temp
+  nixpkgs.config.allowBroken = true;
   
   security.sudo.package = pkgs.sudo.override { withInsults = true; };
 
@@ -64,7 +67,7 @@
       onBoot = "ignore";
       qemu = {
         package = pkgs.qemu_kvm;
-        ovmf.enable = true;
+        # ovmf.enable = true;
         runAsRoot = false;
         swtpm.enable = true;
       };
@@ -153,7 +156,7 @@
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       nerd-fonts.jetbrains-mono
       #corefonts
       (callPackage ./product-sans.nix {})

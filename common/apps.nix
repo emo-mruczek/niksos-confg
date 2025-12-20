@@ -6,7 +6,7 @@
     p3x-onenote
     blueman
     mangohud
-    superTuxKart
+    # superTuxKart
     vpcs
     legendary-gl
     heroic
@@ -47,5 +47,7 @@
     geckodriver
     gnome-disk-utility
     nautilus
+    godot_4
+    gurk-rs
   ];
 }

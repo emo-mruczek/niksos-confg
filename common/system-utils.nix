@@ -83,5 +83,8 @@
     mpd
     dust
     fd
+
+    man-pages
+    man-pages-posix
   ];
 }
