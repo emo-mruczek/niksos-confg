@@ -3,7 +3,7 @@
     magic-wormhole-rs
     sway-audio-idle-inhibit
     attic-client
-    file 
+    file
     ripgrep
     fastfetch
     amdgpu_top
@@ -40,8 +40,6 @@
     lshw
     zip
     unrar
-    cups
-    #plymouth
     xdg-desktop-portal-hyprland
     xdg-desktop-portal-wlr
     xdg-desktop-portal
@@ -51,11 +49,9 @@
     trashy
     cachix
     killall
-    # for hyprland
     swww
     waybar
     wofi
-    #mako
     grim
     grimblast
     satty
@@ -78,7 +74,6 @@
     zathura
     piper
     libratbag
-        # config.boot.kernelPackages.cpupower
     ncdu
     mpd
     dust

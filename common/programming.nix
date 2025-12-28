@@ -4,12 +4,10 @@
     ninja
     stdmanpages
     sbcl
-    smlnj
     astyle
     gnumake
     rocmPackages.llvm.clang-unwrapped
     python3
-    # rocmPackages.rocgdb
     jdk
     python311Packages.pip
     rustc

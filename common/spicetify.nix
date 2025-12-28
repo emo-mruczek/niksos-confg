@@ -11,7 +11,6 @@
     enable = true;
 
     enabledExtensions = with spicePkgs.extensions; [
-      #adblock
       fullAppDisplay
       shuffle
       fullAlbumDate

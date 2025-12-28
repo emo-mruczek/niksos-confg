@@ -4,4 +4,3 @@
     enableBashIntegration = true;
   };
 }
-

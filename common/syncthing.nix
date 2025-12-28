@@ -13,8 +13,8 @@ _: {
       devices = {
         "izolda" = {id = "34TTSGY-FQIRSXF-ZR5WGEW-RWOYUAA-UZ5B4DB-BGFJFW4-O7FR3VY-KAXJJQ7";};
         "izaura" = {id = "FDM4WPF-24HPMQB-NY7VM6S-LW3WDLT-NBBN2RO-AXGEKQA-KPOC3YZ-LXDH5Q4";};
-        "klotylda" = { id = "73Q6VDW-AI36X4E-V54FPCZ-WDIHZ3J-JW6JLZK-B5WUBT5-WWWUYPU-3QL6HQ3"; };
-         "izyda" = { id = "WWCEVNB-PXEW3RI-ZRFIM65-JHCKMQ2-2NDFRMG-GQRECEF-VUAC3DX-COHEGQG"; };
+        "klotylda" = {id = "73Q6VDW-AI36X4E-V54FPCZ-WDIHZ3J-JW6JLZK-B5WUBT5-WWWUYPU-3QL6HQ3";};
+        "izyda" = {id = "WWCEVNB-PXEW3RI-ZRFIM65-JHCKMQ2-2NDFRMG-GQRECEF-VUAC3DX-COHEGQG";};
         # "hiacynta" = { id = ""; };
       };
 
@@ -64,8 +64,8 @@ _: {
         #   };
         # };
         "btop" = {
-            path = "/home/felix/.config/btop/themes";
-            devices = ["izolda" "izaura" "izyda"];
+          path = "/home/felix/.config/btop/themes";
+          devices = ["izolda" "izaura" "izyda"];
         };
         # "librewolf" = {
         #   path = "/home/felix/.librewolf";

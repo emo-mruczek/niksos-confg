@@ -15,6 +15,7 @@
         vimtex.package = pkgs.vimPlugins.vimtex;
         markview.package = pkgs.vimPlugins.markview-nvim;
         cheatsheet.package = pkgs.vimPlugins.cheatsheet-nvim;
+        teamtype.package = pkgs.vimPlugins.teamtype;
       };
 
       clipboard.registers = "unnamedplus";
@@ -28,7 +29,7 @@
         autoindent = true;
         scrolloff = 6;
       };
-      
+
       viAlias = false;
       vimAlias = false;
       enableLuaLoader = true;
@@ -48,7 +49,7 @@
 
       utility = {
         surround.enable = true;
-        motion.precognition.enable = true;
+        # motion.precognition.enable = true;
       };
 
       binds = {
@@ -127,7 +128,7 @@
           enable = true;
         };
       };
-        
+
       lsp = {
         enable = true;
         lspSignature.enable = true;

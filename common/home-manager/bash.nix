@@ -24,27 +24,27 @@
       kot = "cat";
     };
     initExtra = ''
-      gg () {
-        git add .
-        git commit -m "$1"
-        git push
-      }
-      cht () {
-        curl cheat.sh/$1
-      }
+           gg () {
+             git add .
+             git commit -m "$1"
+             git push
+           }
+           cht () {
+             curl cheat.sh/$1
+           }
 
-      source ${pkgs.fetchurl {
+           source ${pkgs.fetchurl {
         url = "https://raw.githubusercontent.com/lincheney/fzf-tab-completion/4850357beac6f8e37b66bd78ccf90008ea3de40b/bash/fzf-bash-completion.sh";
         hash = "sha256-CvrgwkVcDBoIsb4CIJtPDdCE+Xw01EGNpfGpENzWvCw=";
       }}
-      bind -x '"\t": fzf_bash_completion'
+           bind -x '"\t": fzf_bash_completion'
 
-      export FZF_DEFAULT_OPTS="
-	--color=fg:#908caa,bg:#191724,hl:#ebbcba
-	--color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba
-	--color=border:#403d52,header:#31748f,gutter:#191724
-	--color=spinner:#f6c177,info:#9ccfd8
-	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
+           export FZF_DEFAULT_OPTS="
+      --color=fg:#908caa,bg:#191724,hl:#ebbcba
+      --color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba
+      --color=border:#403d52,header:#31748f,gutter:#191724
+      --color=spinner:#f6c177,info:#9ccfd8
+      --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
     '';
   };
 }

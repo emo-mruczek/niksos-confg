@@ -41,7 +41,7 @@
       #outer-box {
           margin: 15px;
           border: none;
-          border-radius: 10px; 
+          border-radius: 10px;
           background-color: #232136;
       }
 
@@ -54,7 +54,7 @@
           margin: 5px;
           border: none;
           color: #e0def4;
-      } 
+      }
 
       #entry:selected {
           background-color: #eb6f92;
@@ -68,7 +68,7 @@
           color: #232136;
           border-radius: 10px;;
           outline: none;
-      }    
+      }
     '';
   };
 }

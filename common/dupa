@@ -1,0 +1,25 @@
+diff --git a/.gitignore b/.gitignore
+index 1ba75facf3..42967133b5 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -38,3 +38,6 @@ out/
+ *.orig
+ tests/CI/output
+ .develvars
++.direnv
++compile_commands.json
++.
+diff --git a/res/res_pjsip_rfc3326.c b/res/res_pjsip_rfc3326.c
+index d190b6d138..9c07c11dcf 100644
+--- a/res/res_pjsip_rfc3326.c
++++ b/res/res_pjsip_rfc3326.c
+@@ -104,7 +104,8 @@ static void rfc3326_add_reason_header(struct ast_sip_session *session, struct pj
+ 			(ast_channel_hangupcause(session->channel) & 0x7f),
+ 			ast_sorcery_object_get_id(session->endpoint));
+ 	} else {
+-		snprintf(buf, sizeof(buf), "Q.850;cause=%i", ast_channel_hangupcause(session->channel) & 0x7f);
++                int r = ast_channel_hangupcause(session->channel);
++		snprintf(buf, sizeof(buf), "Q.850;cause=%i", r  & 0x7f);
+ 		ast_sip_add_header(tdata, "Reason", buf);
+ 	}
+ }

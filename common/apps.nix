@@ -1,9 +1,7 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     p3x-onenote
+    teamtype
     blueman
     mangohud
     # superTuxKart
@@ -32,7 +30,6 @@
     keepassxc
     krita
     openconnect
-    # texliveFull
     subversionClient
     asciinema
     zathura

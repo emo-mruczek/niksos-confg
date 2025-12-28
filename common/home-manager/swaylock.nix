@@ -54,4 +54,4 @@
       ring-wrong-color = "#eb6f92aa";
     };
   };
-  }
+}

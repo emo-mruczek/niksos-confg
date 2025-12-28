@@ -12,6 +12,6 @@ _: {
     ./configuration.nix
     ./syncthing.nix
     ./home-manager/default.nix
-    # ./unstable.nix
+    ./asterisk.nix
   ];
 }
