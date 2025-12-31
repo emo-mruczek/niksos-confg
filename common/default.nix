@@ -13,5 +13,6 @@ _: {
     ./syncthing.nix
     ./home-manager/default.nix
     ./asterisk.nix
+    ./tramwaj.nix
   ];
 }

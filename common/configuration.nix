@@ -24,7 +24,6 @@
         proton-ge-bin
       ];
     };
-    vim.defaultEditor = true;
   };
 
   environment.systemPackages = with pkgs; [

@@ -11,7 +11,7 @@
         fixed-center = true;
         modules-left = ["hyprland/workspaces" "hyprland/mode" "hyprland/taskbar"];
         modules-center = ["hyprland/window" "custom/hello-from-waybar" "mpris"];
-        modules-right = ["memory" "cpu" "temperature" "pulseaudio" "clock" "clock#simpleclock" "battery" "tray" "custom/power"];
+        modules-right = ["cpu" "temperature" "memory" "pulseaudio" "clock" "clock#simpleclock" "battery" "tray" "custom/power"];
 
         "custom/hello-from-waybar" = {
           format = "{}";
@@ -105,7 +105,27 @@
     };
 
     style = ''
-          * {
+        @define-color base            #191724;
+        @define-color surface         #1f1d2e;
+        @define-color overlay         #26233a;
+
+        @define-color muted           #6e6a86;
+        @define-color subtle          #908caa;
+        @define-color text            #e0def4;
+
+        @define-color love            #eb6f92;
+        @define-color gold            #f6c177;
+        @define-color rose            #ebbcba;
+        @define-color pine            #31748f;
+        @define-color foam            #9ccfd8;
+        @define-color iris            #c4a7e7;
+
+        @define-color highlightLow    #21202e;
+        @define-color highlightMed    #403d52;
+        @define-color highlightHigh   #524f67;
+
+
+      * {
         min-height: 0;
         font-family: Lexend, "Font JetBrainsMono 6 Free Solid";
         font-size: 20px;
@@ -115,8 +135,6 @@
       window#waybar {
         transition-property: background-color;
         transition-duration: 0.5s;
-        /* background-color: #1e1e2e; */
-        /* background-color: #181825; */
         background-color: rgba(24, 24, 37, 0.6);
       }
 
@@ -137,10 +155,10 @@
         margin: 4px 4px;
         border-radius: 8px;
         background-color: #181825;
-        color: #cdd674;
+        color: @text;
         }
 
-        #workspaces button:hover {
+      #workspaces button:hover {
         box-shadow: inherit;
         text-shadow: inherit;
         color: #1e1e2e;
@@ -171,7 +189,7 @@
         padding: 2px 10px;
         border-radius: 8px;
         margin: 4px 4px;
-        background-color: #181825;
+        background-color: @base;
       }
 
       @keyframes blink {
@@ -197,40 +215,40 @@
         background-color: transparent;
       }
 
+      #memory {
+        color: @love;
+      }
+
       #cpu {
-        color: #94e2d5;
+        color: @gold;
       }
 
       #temperature {
-          color: #94e2d5;
-      }
-
-      #memory {
-        color: #cba6f7;
-      }
-
-      #battery {
-        color: #74c7ec;
-      }
-
-      #clock {
-        color: #74c7ec;
-      }
-
-      #clock.simpleclock {
-        color: #89b4fa;
-      }
-
-      #window {
-        color: #a6e3a1;
+          color: @gold;
       }
 
       #pulseaudio {
-        color: #b4befe;
+        color: @subtle;
       }
 
       #pulseaudio.muted {
-        color: #a6adc8;
+        color: @subtle;
+      }
+
+      #clock {
+        color: @pine;
+      }
+
+      #clock.simpleclock {
+        color: @rose;
+      }
+
+      #battery {
+        color: @iris;
+      }
+
+      #window {
+        color: @foam;
       }
 
       #custom-logo {
@@ -244,11 +262,11 @@
       }
 
       #mpris {
-        color: #8d305a;
+        color: @foam;
       }
 
       #custom-hello-from-waybar {
-        color: #97cf30;
+        color: @text;
       }
 
       @keyframes blink {

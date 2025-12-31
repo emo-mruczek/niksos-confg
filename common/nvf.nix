@@ -5,6 +5,11 @@
 }: {
   imports = [inputs.nvf.nixosModules.default];
 
+  environment.sessionVariables = {
+    EDITOR = "nvim";
+    MANPAGER = "nvim +Man!";
+  };
+
   programs.nvf = {
     enable = true;
 
