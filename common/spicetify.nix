@@ -37,6 +37,6 @@
     ];
 
     #theme = spicePkgs.themes.comfy;
-    colorScheme = "rose-pine";
+    #colorScheme = "rose-pine";
   };
 }
