@@ -26,7 +26,7 @@
       playNext
       copyLyrics
       playingSource
-      beautifulLyrics
+      # beautifulLyrics
     ];
 
     enabledCustomApps = with spicePkgs.apps; [

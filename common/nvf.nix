@@ -175,9 +175,9 @@
         rust = {
           enable = true;
         };
-        html = {
-          enable = true;
-        };
+        # html = {
+        #  enable = true;
+        #        };
         # haskell.enable = true;
         go.enable = true;
         assembly.enable = true;
