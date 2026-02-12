@@ -36,7 +36,7 @@
       betterLibrary
     ];
 
-    theme = spicePkgs.themes.comfy;
+    #theme = spicePkgs.themes.comfy;
     colorScheme = "rose-pine";
   };
 }
