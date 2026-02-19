@@ -53,7 +53,7 @@
         full_color = true;
         asterisk = "@";
         #battery_id = "BAT0";
-        #bigclock = "pl";
+        bigclock = "en";
         bigclock_seconds = true;
         initial_info_text = ":3";
         clear_password = true;

@@ -26,7 +26,9 @@
       playNext
       copyLyrics
       playingSource
-      # beautifulLyrics
+      beautifulLyrics
+      aiBandBlocker
+      catJamSynced
     ];
 
     enabledCustomApps = with spicePkgs.apps; [
@@ -36,7 +38,7 @@
       betterLibrary
     ];
 
-    #theme = spicePkgs.themes.comfy;
-    #colorScheme = "rose-pine";
+    theme = spicePkgs.themes.comfy;
+    colorScheme = "rose-pine";
   };
 }
