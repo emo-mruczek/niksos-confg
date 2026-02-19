@@ -27,8 +27,8 @@
   };
 
   environment.systemPackages = with pkgs; [
-    (callPackage ./sddm-rose-pine.nix {})
-    wineWowPackages.stable
+    #  (callPackage ./sddm-rose-pine.nix {})
+    wineWow64Packages.stable
     winetricks
     #(callPackage ./packettracer.nix {inherit (pkgs) stdenv;}).packettracer
   ];
@@ -41,10 +41,23 @@
       xkb.variant = "";
       enable = true;
     };
-    displayManager.sddm = {
+    # displayManager.sddm = {
+    #   enable = true;
+    #   wayland.enable = true;
+    #   theme = "rose-pine";
+    # };
+    displayManager.ly = {
       enable = true;
-      wayland.enable = true;
-      theme = "rose-pine";
+      settings = {
+        animation = "gameoflife";
+        full_color = true;
+        asterisk = "@";
+        #battery_id = "BAT0";
+        #bigclock = "pl";
+        bigclock_seconds = true;
+        initial_info_text = ":3";
+        clear_password = true;
+      };
     };
     playerctld.enable = true;
 
@@ -59,6 +72,7 @@
 
     avahi = {
       enable = true;
+      nssmdns4 = true;
       openFirewall = true;
     };
   };
