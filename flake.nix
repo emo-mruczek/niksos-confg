@@ -5,7 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
 
-    mangowc = {
+    mango = {
       url = "github:DreamMaoMao/mangowc";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -75,7 +75,7 @@
           ./common
           ./izyda
 
-          inputs.nixosModules.home-manager
+          inputs.home-manager.nixosModules.home-manager
           inputs.mango.nixosModules.mango
         ];
       };

@@ -11,6 +11,7 @@ _: {
     ./timezone.nix
     ./configuration.nix
     ./syncthing.nix
+    ./mangowc.nix
     ./home-manager/default.nix
     #./asterisk.nix
     #./tramwaj.nix
