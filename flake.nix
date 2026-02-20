@@ -5,9 +5,16 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
 
+    mangowc = {
+      url = "github:DreamMaoMao/mangowc";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    flake-parts.url = "github:hercules-ci/flake-parts";
+
     nvf = {
       url = "github:notashelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs-small";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     hyprland = {
@@ -32,8 +39,14 @@
     nixpkgs,
     home-manager,
     nixpkgs-small,
+    mango,
+    flake-parts,
     ...
-  } @ inputs: {
+  } @ inputs: 
+  flake-parts.lib.mkFlake { inherit inputs; } {
+    debug = false;
+    systems = ["x86_64-linux"];
+    flake = {
     nixosConfigurations = {
       izolda = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -42,7 +55,7 @@
           ./common
           ./izolda
 
-          home-manager.nixosModules.home-manager
+          inputs.home-manager.nixosModules.home-manager
         ];
       };
       izaura = nixpkgs.lib.nixosSystem {
@@ -52,7 +65,7 @@
           ./common
           ./izaura
 
-          home-manager.nixosModules.home-manager
+          inputs.home-manager.nixosModules.home-manager
         ];
       };
       izyda = nixpkgs.lib.nixosSystem {
@@ -62,10 +75,11 @@
           ./common
           ./izyda
 
-          home-manager.nixosModules.home-manager
+          inputs.nixosModules.home-manager
+          inputs.mango.nixosModules.mango
         ];
       };
- 
+    };
     };
   };
 }

@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  inputs,
   ...
 }: {
   imports = [
@@ -18,7 +19,8 @@
     ./lsd.nix
     ./direnv.nix
     ./fzf.nix
-  ];
+    ./mangowc.nix
+  ] ++ [inputs.mango.hmModules.mango]; 
 
   home = {
     username = "felix";
@@ -36,7 +38,6 @@
     };
 
     stateVersion = "23.11";
-    # file.".config/hypr/".source = config.lib.file.mkOutOfStoreSymlink ./hypr;
   };
 
   # programs = {
