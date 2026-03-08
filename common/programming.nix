@@ -9,7 +9,7 @@
     rocmPackages.llvm.clang-unwrapped
     python3
     jdk
-    python311Packages.pip
+    #python311Packages.pip
     rustc
     cargo
     mono

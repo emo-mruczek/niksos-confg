@@ -26,7 +26,6 @@
     unzip
     zip
     git
-    neofetch
     kitty
     haveged # entropy
     wireshark

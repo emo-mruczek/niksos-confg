@@ -1,9 +1,15 @@
-{lib, config, pkgs, inputs,  ...}: {
-    services.swayidle = {
+{
+  lib,
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
+  services.swayidle = {
     # enable = if (builtins.getEnv "HOSTNAME" == "izolda") then true else false;
     enable = true;
     timeouts = [
-      { 
+      {
         timeout = 240;
         command = "${lib.getExe' pkgs.dunst "dunstify"} -t 5000 -u normal 'Locking in 1 minute'";
       }
@@ -13,9 +19,8 @@
       }
       {
         timeout = 400;
-        command = "${lib.getExe' inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland "hyprctl"} dispatch dpms off"; 
-        resumeCommand = "${lib.getExe' inputs.hyprland.packages.${pkgs..stdenv.hostPlatform.system}.hyprland "hyprctl"} dispatch dpms on"; 
-
+        command = "${lib.getExe' inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland "hyprctl"} dispatch dpms off";
+        resumeCommand = "${lib.getExe' inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland "hyprctl"} dispatch dpms on";
       }
       {
         timeout = 420;

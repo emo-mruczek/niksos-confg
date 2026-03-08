@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    kicad
+    #    kicad
     p3x-onenote
     teamtype
     blueman

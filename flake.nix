@@ -56,6 +56,7 @@
           ./izolda
 
           inputs.home-manager.nixosModules.home-manager
+          inputs.mango.nixosModules.mango
         ];
       };
       izaura = nixpkgs.lib.nixosSystem {
@@ -66,6 +67,7 @@
           ./izaura
 
           inputs.home-manager.nixosModules.home-manager
+          inputs.mango.nixosModules.mango
         ];
       };
       izyda = nixpkgs.lib.nixosSystem {
