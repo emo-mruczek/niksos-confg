@@ -12,6 +12,7 @@
     #python311Packages.pip
     rustc
     cargo
+    rustfmt
     mono
     pyenv
     gdb
