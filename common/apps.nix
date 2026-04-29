@@ -43,7 +43,7 @@
     scrcpy
     blahaj
     krita
-    lutris
+    # lutris
     geckodriver
     gnome-disk-utility
     nautilus

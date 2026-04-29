@@ -180,7 +180,8 @@
         #        };
         # haskell.enable = true;
         go.enable = true;
-        assembly.enable = true;
+        #assembly.enable = true;
+
       };
     };
   };
