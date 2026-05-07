@@ -43,10 +43,7 @@
     flake-parts,
     ...
   } @ inputs: 
-  flake-parts.lib.mkFlake { inherit inputs; } {
-    debug = false;
-    systems = ["x86_64-linux"];
-    flake = {
+    { 
     nixosConfigurations = {
       izolda = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -55,8 +52,8 @@
           ./common
           ./izolda
 
-          inputs.home-manager.nixosModules.home-manager
-          inputs.mango.nixosModules.mango
+         home-manager.nixosModules.home-manager
+          mango.nixosModules.mango
         ];
       };
       izaura = nixpkgs.lib.nixosSystem {
@@ -66,8 +63,8 @@
           ./common
           ./izaura
 
-          inputs.home-manager.nixosModules.home-manager
-          inputs.mango.nixosModules.mango
+          home-manager.nixosModules.home-manager
+          mango.nixosModules.mango
         ];
       };
       izyda = nixpkgs.lib.nixosSystem {
@@ -77,11 +74,10 @@
           ./common
           ./izyda
 
-          inputs.home-manager.nixosModules.home-manager
-          inputs.mango.nixosModules.mango
+          home-manager.nixosModules.home-manager
+          mango.nixosModules.mango
         ];
       };
-    };
     };
   };
 }
