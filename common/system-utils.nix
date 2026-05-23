@@ -28,7 +28,7 @@
     git
     kitty
     haveged # entropy
-    wireshark
+    #wireshark
     inetutils # somethig for networking
     wl-clipboard # for clipboard
     alejandra
