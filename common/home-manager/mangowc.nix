@@ -1,3 +1,5 @@
+# https://github.com/jawor182/dotfiles/blob/147d707c410a6d1819038ff5cdd385d695b6e65f/.config/mango/config.conf -> THANKS!
+
 {pkgs, ...}: {
   wayland.windowManager.mango = {
     enable = true;
@@ -13,7 +15,7 @@ env = XDG_SESSION_TYPE,wayland
 
 # not working
 exec-once = awww-daemon
-exec-once = awww img ~/niksos-confg/rise-pine-wallpapers/wallpapers/pixelart/leaves-hard-pixelated.png
+exec-once = awww img ~/niksos-confg/rose-pine-wallpapers/wallpapers/pixelart/leaves-hard-pixelated.png
 
 # not working
 exec-once = waybar
@@ -82,25 +84,30 @@ bind=SUPER+SHIFT,9,tag,9,0
 
 
 # BROKEN
-windowrule = isnamedscratchpad:1,width:1200,height:800,appid:Spotify, isfakefullscreen:1, isfloating:1
+windowrule = isnamedscratchpad:1,appid:^(Spotify|signal), isfakefullscreen:1, isfloating:1
 bind = SUPER, T, toggle_named_scratchpad, Spotify, none, spotify
+bind = SUPER, S, toggle_named_scratchpad, signal, none, signal-desktop
 
 scratchpad_width_ratio=1.0
 scratchpad_height_ratio=1.0
 
-windowrule = isnamedscratchpad:1,appid:signal, isfakefullscreen:1
-bind = SUPER, S, toggle_named_scratchpad, signal, none, signal-desktop
+#windowrule = isnamedscratchpad:1,appid:signal, isfakefullscreen:1
 
 # Binds for laptop
-bindl =NONE , XF86MonBrightnessUp,   spawn, brightnessctl set +5%
-bindl =NONE , XF86MonBrightnessDown, spawn, brightnessctl set 5%-
-bindl =NONE , XF86AudioRaiseVolume,  spawn, wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+
-bindl =NONE , XF86AudioLowerVolume,  spawn, wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-
-bindl =NONE , XF86AudioMute, spawn, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-
+bindl = NONE, XF86MonBrightnessUp,   spawn, brightnessctl set +5%
+bindl = NONE, XF86MonBrightnessDown, spawn, brightnessctl set 5%-
+bindl = NONE, XF86AudioRaiseVolume,  spawn, wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+
+bindl = NONE, XF86AudioLowerVolume,  spawn, wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-
+bindl = NONE, XF86AudioMute, spawn, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bind=NONE,XF86AudioNext,spawn,playerctl next
 bind=NONE,XF86AudioPrev,spawn,playerctl previous
 bind=NONE,XF86AudioPlay,spawn,playerctl play-pause
+
+bind=SUPER+SHIFT,Up,exchange_client,up
+bind=SUPER+SHIFT,Down,exchange_client,down
+bind=SUPER+SHIFT,Left,exchange_client,left
+bind=SUPER+SHIFT,Right,exchange_client,right
+
 
 
 # DEFAULTS
@@ -216,22 +223,12 @@ scratchpadcolor=0x516c93ff
 globalcolor=0xb153a7ff
 overlaycolor=0x14a57cff
 
-
-
-
-
 # switch window focus
 bind=SUPER,Tab,focusstack,next
 bind=ALT,Left,focusdir,left
 bind=ALT,Right,focusdir,right
 bind=ALT,Up,focusdir,up
 bind=ALT,Down,focusdir,down
-
-# swap window
-bind=SUPER+SHIFT,Up,exchange_client,up
-bind=SUPER+SHIFT,Down,exchange_client,down
-bind=SUPER+SHIFT,Left,exchange_client,left
-bind=SUPER+SHIFT,Right,exchange_client,right
 
 # switch window status
 bind=SUPER,g,toggleglobal,
@@ -244,15 +241,6 @@ bind=SUPER,i,minimized,
 bind=SUPER,o,toggleoverlay,
 bind=SUPER+SHIFT,I,restore_minimized
 bind=ALT,z,toggle_scratchpad
-
-
-
-
-
-
-
-
-
 
 # monitor switch
 bind=alt+shift,Left,focusmon,left

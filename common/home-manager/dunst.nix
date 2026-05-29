@@ -14,12 +14,12 @@
       global = {
         layer = "top";
         width = 300;
-        offset = "20x20";
+        offset = "14x10";
         progress_bar_min_width = 280;
         progress_bar_max_width = 280;
         progress_bar_corner_radius = 2;
-        padding = 10;
-        horizontal_padding = 10;
+        #padding = 10;
+        #horizontal_padding = 10;
         frame_width = 1;
         gap_size = 3;
         font = "Monospace 14";

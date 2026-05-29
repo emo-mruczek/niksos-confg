@@ -19,8 +19,10 @@
       }
       {
         timeout = 400;
-        command = "${lib.getExe' pkgs.hyprland "hyprctl"} dispatch dpms off";
-        resumeCommand = "${lib.getExe' pkgs.hyprland "hyprctl"} dispatch dpms on";
+        #  command = "${lib.getExe' pkgs.hyprland "hyprctl"} dispatch dpms off";
+        # resumeCommand = "${lib.getExe' pkgs.hyprland "hyprctl"} dispatch dpms on";
+        command = "wlr-dpms off";
+        resumeCommand = "wlr-dpms on";
       }
       {
         timeout = 420;
