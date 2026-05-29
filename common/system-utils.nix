@@ -48,7 +48,7 @@
     trashy
     cachix
     killall
-    swww
+    awww
     waybar
     wofi
     grim
@@ -56,6 +56,7 @@
     satty
     slurp
     swaylock-effects
+    wayfreeze
 
     font-awesome_5
     line-awesome

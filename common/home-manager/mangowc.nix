@@ -82,6 +82,10 @@ bind=SUPER+SHIFT,7,tag,7,0
 bind=SUPER+SHIFT,8,tag,8,0
 bind=SUPER+SHIFT,9,tag,9,0
 
+bind=NONE,Print,spawn,$HOME/niksos-confg/common/home-manager/assets/screenshot.sh annotate
+
+#bind = NONE, Print, spawn_shell, grimblast save area - | satty --early-exit --initial-tool brush -f - --output-filename \"~/screenshots/$(date +'screenshot-%Y%m%d%H%M%S.png')\" --copy-command \"wl-copy\"
+
 
 # BROKEN
 windowrule = isnamedscratchpad:1,appid:^(Spotify|signal), isfakefullscreen:1, isfloating:1

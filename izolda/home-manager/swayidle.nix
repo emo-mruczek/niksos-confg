@@ -29,11 +29,6 @@
         command = "${lib.getExe' pkgs.systemd "systemctl"} suspend";
       }
     ];
-    events = [
-      {
-        event = "before-sleep";
-        command = "${lib.getExe config.programs.swaylock.package} -f && playerctl pause";
-      }
-    ];
+    events.before-sleep = "${lib.getExe config.programs.swaylock.package} -f && playerctl pause";
   };
 }

@@ -68,7 +68,10 @@
     };
 
     # broken
-    printing.enable = true;
+    printing = { 
+      enable = true;
+      drivers = with pkgs; [ foo2zjs ];
+    };
 
     avahi = {
       enable = true;

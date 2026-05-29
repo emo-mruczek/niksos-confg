@@ -13,6 +13,7 @@ _: {
     ./syncthing.nix
     ./mangowc.nix
     ./home-manager/default.nix
+    ./lix.nix
     #./asterisk.nix
     #./tramwaj.nix
   ];
