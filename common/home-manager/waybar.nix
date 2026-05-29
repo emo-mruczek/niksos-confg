@@ -9,9 +9,17 @@
         spacing = 1;
         passthrough = false;
         fixed-center = true;
-        modules-left = ["ext/workspaces" "ext/mode" "ext/taskbar"];
+        modules-left = ["idle_inhibitor" "ext/workspaces" "ext/mode" "ext/taskbar"];
         modules-center = ["dwl/window" "custom/hello-from-waybar" "mpris"];
         modules-right = ["cpu" "temperature" "memory" "pulseaudio" "clock" "clock#simpleclock" "battery" "tray" "custom/power"];
+
+        "idle_inhibitor" = {
+	format = "{icon}";
+	format-icons = {
+		"activated" = "";
+		"deactivated" = "";
+	};
+        };
 
         "custom/hello-from-waybar" = {
           format = "{}";
@@ -174,6 +182,7 @@
         background-color: #f38ba8;
       }
 
+      #idle_inhibitor,
       #clock,
       #pulseaudio,
       #custom-logo,
@@ -275,6 +284,12 @@
           color: #181825;
         }
       }
+
+      #idle_inhibitor {
+        color: @subtle;
+      }
+
+
 
       tooltip {
         border-radius: 8px;
