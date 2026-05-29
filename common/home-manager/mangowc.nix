@@ -3,7 +3,7 @@
 {pkgs, ...}: {
   wayland.windowManager.mango = {
     enable = true;
-    settings = ''
+    extraConfig = ''
 
 env = XCURSOR_SIZE,24
 env = QT_QPA_PLATFORMTHEME,qt5ct # change to qt6ct if you have that
