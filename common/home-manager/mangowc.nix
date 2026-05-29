@@ -2,6 +2,7 @@
   wayland.windowManager.mango = {
     enable = true;
     settings = ''
+
 env = XCURSOR_SIZE,24
 env = QT_QPA_PLATFORMTHEME,qt5ct # change to qt6ct if you have that
 env = WLR_NO_HARDWARE_CURSORS,1
@@ -10,16 +11,99 @@ env = XDG_SESSION_TYPE,wayland
 #env = GBM_BACKEND,nvidia-drm
 #env = __GLX_VENDOR_LIBRARY_NAME, nvidia
 
-exec-once = swww-daemon
-#exec = swww img ~/niksos-confg/rise-pine-wallpapers/wallpapers/pixelart/leaves-hard-pixelated.png
+# not working
+exec-once = awww-daemon
+exec-once = awww img ~/niksos-confg/rise-pine-wallpapers/wallpapers/pixelart/leaves-hard-pixelated.png
+
+# not working
 exec-once = waybar
+
 exec-once = nm-applet --indicator & disown
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 #exec-once = systemctl --user start batsignal
 #exec-once = systemctl --user start swayidle
 #exec-once = sway-audio-idle-inhibit & disown
 
+# tile,scroller,grid,deck,monocle,center_tile,vertical_tile,vertical_scroller
+tagrule=id:1,layout_name:dwindle
+tagrule=id:2,layout_name:dwindle
+tagrule=id:3,layout_name:dwindle
+tagrule=id:4,layout_name:dwindle
+tagrule=id:5,layout_name:dwindle
+tagrule=id:6,layout_name:dwindle
+tagrule=id:7,layout_name:dwindle
+tagrule=id:8,layout_name:dwindle
+tagrule=id:9,layout_name:dwindle
 
+bind=SUPER,n,switch_layout
+circle_layout=dwindle
+
+# DEFAULT
+bind=SUPER,Left,viewtoleft,0
+bind=CTRL,Left,viewtoleft_have_client,0
+bind=SUPER,Right,viewtoright,0
+bind=CTRL,Right,viewtoright_have_client,0
+bind=CTRL+SUPER,Left,tagtoleft,0
+bind=CTRL+SUPER,Right,tagtoright,0
+
+bind=SUPER,1,view,1,0
+bind=SUPER,2,view,2,0
+bind=SUPER,3,view,3,0
+bind=SUPER,4,view,4,0
+bind=SUPER,5,view,5,0
+bind=SUPER,6,view,6,0
+bind=SUPER,7,view,7,0
+bind=SUPER,8,view,8,0
+bind=SUPER,9,view,9,0
+
+bind = SUPER, F, togglefullscreen
+bind = SUPER, V, togglefloating
+
+bind = SUPER,Q,spawn,kitty
+bind = SUPER,R,spawn,wofi --show drun
+bind = SUPER,E,spawn,dolphin
+bind = SUPER,L,spawn,librewolf
+bind = SUPER,C,killclient,
+bind = SUPER+SHIFT, R, reload_config
+# blokowanie
+
+# tag: move client to the tag and focus it
+# tagsilent: move client to the tag and not focus it
+# bind=Alt,1,tagsilent,1
+bind=SUPER+SHIFT,1,tag,1,0
+bind=SUPER+SHIFT,2,tag,2,0
+bind=SUPER+SHIFT,3,tag,3,0
+bind=SUPER+SHIFT,4,tag,4,0
+bind=SUPER+SHIFT,5,tag,5,0
+bind=SUPER+SHIFT,6,tag,6,0
+bind=SUPER+SHIFT,7,tag,7,0
+bind=SUPER+SHIFT,8,tag,8,0
+bind=SUPER+SHIFT,9,tag,9,0
+
+
+# BROKEN
+windowrule = isnamedscratchpad:1,width:1200,height:800,appid:Spotify, isfakefullscreen:1, isfloating:1
+bind = SUPER, T, toggle_named_scratchpad, Spotify, none, spotify
+
+scratchpad_width_ratio=1.0
+scratchpad_height_ratio=1.0
+
+windowrule = isnamedscratchpad:1,appid:signal, isfakefullscreen:1
+bind = SUPER, S, toggle_named_scratchpad, signal, none, signal-desktop
+
+# Binds for laptop
+bindl =NONE , XF86MonBrightnessUp,   spawn, brightnessctl set +5%
+bindl =NONE , XF86MonBrightnessDown, spawn, brightnessctl set 5%-
+bindl =NONE , XF86AudioRaiseVolume,  spawn, wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+
+bindl =NONE , XF86AudioLowerVolume,  spawn, wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-
+bindl =NONE , XF86AudioMute, spawn, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+
+bind=NONE,XF86AudioNext,spawn,playerctl next
+bind=NONE,XF86AudioPrev,spawn,playerctl previous
+bind=NONE,XF86AudioPlay,spawn,playerctl play-pause
+
+
+# DEFAULTS
 
 # Window effect
 blur=0
@@ -71,21 +155,6 @@ animation_curve_close=0.08,0.92,0,1
 animation_curve_focus=0.46,1.0,0.29,1
 animation_curve_opafadeout=0.5,0.5,0.5,0.5
 animation_curve_opafadein=0.46,1.0,0.29,1
-
-# Scroller Layout Setting
-scroller_structs=20
-scroller_default_proportion=0.8
-scroller_focus_center=0
-scroller_prefer_center=0
-edge_scroller_pointer_focus=1
-scroller_default_proportion_single=1.0
-scroller_proportion_preset=0.5,0.8,1.0
-
-# Master-Stack Layout Setting
-new_is_master=1
-default_mfact=0.55
-default_nmaster=1
-smartgaps=0
 
 # Overview Setting
 hotarea_size=10
@@ -147,24 +216,9 @@ scratchpadcolor=0x516c93ff
 globalcolor=0xb153a7ff
 overlaycolor=0x14a57cff
 
-# layout support:
-# tile,scroller,grid,deck,monocle,center_tile,vertical_tile,vertical_scroller
-tagrule=id:1,layout_name:tile
-tagrule=id:2,layout_name:tile
-tagrule=id:3,layout_name:tile
-tagrule=id:4,layout_name:tile
-tagrule=id:5,layout_name:tile
-tagrule=id:6,layout_name:tile
-tagrule=id:7,layout_name:tile
-tagrule=id:8,layout_name:tile
-tagrule=id:9,layout_name:tile
 
-bind = SUPER,Q,spawn,kitty
-bind = SUPER,R,spawn,wofi --show drun
 
-# exit
-bind=SUPER,m,quit
-bind=ALT,q,killclient,
+
 
 # switch window focus
 bind=SUPER,Tab,focusstack,next
@@ -191,43 +245,14 @@ bind=SUPER,o,toggleoverlay,
 bind=SUPER+SHIFT,I,restore_minimized
 bind=ALT,z,toggle_scratchpad
 
-# scroller layout
-bind=ALT,e,set_proportion,1.0
-bind=ALT,x,switch_proportion_preset,
 
-# switch layout
-bind=SUPER,n,switch_layout
 
-# tag switch
-bind=SUPER,Left,viewtoleft,0
-bind=CTRL,Left,viewtoleft_have_client,0
-bind=SUPER,Right,viewtoright,0
-bind=CTRL,Right,viewtoright_have_client,0
-bind=CTRL+SUPER,Left,tagtoleft,0
-bind=CTRL+SUPER,Right,tagtoright,0
 
-bind=Ctrl,1,view,1,0
-bind=Ctrl,2,view,2,0
-bind=Ctrl,3,view,3,0
-bind=Ctrl,4,view,4,0
-bind=Ctrl,5,view,5,0
-bind=Ctrl,6,view,6,0
-bind=Ctrl,7,view,7,0
-bind=Ctrl,8,view,8,0
-bind=Ctrl,9,view,9,0
 
-# tag: move client to the tag and focus it
-# tagsilent: move client to the tag and not focus it
-# bind=Alt,1,tagsilent,1
-bind=Alt,1,tag,1,0
-bind=Alt,2,tag,2,0
-bind=Alt,3,tag,3,0
-bind=Alt,4,tag,4,0
-bind=Alt,5,tag,5,0
-bind=Alt,6,tag,6,0
-bind=Alt,7,tag,7,0
-bind=Alt,8,tag,8,0
-bind=Alt,9,tag,9,0
+
+
+
+
 
 # monitor switch
 bind=alt+shift,Left,focusmon,left

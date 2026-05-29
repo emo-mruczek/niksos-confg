@@ -26,5 +26,7 @@
     gcc-arm-embedded
     stm32cubemx
     openocd
+    nvc
+    gtkwave
   ];
 }

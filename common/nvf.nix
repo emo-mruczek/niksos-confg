@@ -179,8 +179,9 @@
         #  enable = true;
         #        };
         # haskell.enable = true;
-        go.enable = true;
+        #go.enable = true;
         #assembly.enable = true;
+        vhdl.enable = true;
 
       };
     };

@@ -9,17 +9,17 @@
         spacing = 1;
         passthrough = false;
         fixed-center = true;
-        modules-left = ["hyprland/workspaces" "hyprland/mode" "hyprland/taskbar"];
-        modules-center = ["hyprland/window" "custom/hello-from-waybar" "mpris"];
+        modules-left = ["ext/workspaces" "ext/mode" "ext/taskbar"];
+        modules-center = ["dwl/window" "custom/hello-from-waybar" "mpris"];
         modules-right = ["cpu" "temperature" "memory" "pulseaudio" "clock" "clock#simpleclock" "battery" "tray" "custom/power"];
 
         "custom/hello-from-waybar" = {
           format = "{}";
           max-length = 40;
           interval = "once";
-          exec = pkgs.writeShellScript "hello-from-waybar" ''echo "HoHoHo :3c" '';
+          exec = pkgs.writeShellScript "hello-from-waybar" ''echo "miał miał miał :3c" '';
         };
-        "wlr/workspaces" = {
+        "ext/workspaces" = {
           on-click = "activate";
           format = "{name}";
           all-outputs = true;
