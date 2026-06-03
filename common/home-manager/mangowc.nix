@@ -86,9 +86,10 @@ bind=SUPER+SHIFT,9,tag,9,0
 
 bind = NONE, Print, spawn_shell, slurp | grim -g - -  | satty --early-exit --initial-tool brush -f - --output-filename \"~/screenshots/$(date +'screenshot-%Y%m%d%H%M%S.png')\" --copy-command \"wl-copy\"
 
-windowrule = isnamedscratchpad:1,appid:^(Spotify|signal), isfakefullscreen:1, isfloating:1
+windowrule = isnamedscratchpad:1,appid:^(Spotify|signal|keepassxc), isfakefullscreen:1, isfloating:1
 bind = SUPER, T, toggle_named_scratchpad, Spotify, none, spotify
 bind = SUPER, S, toggle_named_scratchpad, signal, none, signal-desktop
+bind = SUPER, K, toggle_named_scratchpad, keepassxc, none, keepassxc
 
 scratchpad_width_ratio=1.0
 scratchpad_height_ratio=1.0
