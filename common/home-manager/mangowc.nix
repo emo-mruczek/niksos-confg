@@ -5,6 +5,8 @@
     enable = true;
     extraConfig = ''
 
+      monitorrule=name:DP-1,width:2560,height:1440,refresh:144
+
 env = XCURSOR_SIZE,24
 env = QT_QPA_PLATFORMTHEME,qt5ct # change to qt6ct if you have that
 env = WLR_NO_HARDWARE_CURSORS,1
