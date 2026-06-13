@@ -2,6 +2,7 @@
   environment.systemPackages = with pkgs; [
     #    kicad
     p3x-onenote
+    chromium
     element-desktop
     mindustry-wayland
     teamtype

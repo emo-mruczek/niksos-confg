@@ -14,6 +14,7 @@ _: {
     ./mangowc.nix
     ./home-manager/default.nix
     ./lix.nix
+    ./nix-ld.nix
     #./asterisk.nix
     #./tramwaj.nix
   ];
