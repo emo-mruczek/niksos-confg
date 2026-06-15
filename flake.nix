@@ -10,8 +10,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    flake-parts.url = "github:hercules-ci/flake-parts";
-
     nvf = {
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -34,7 +32,6 @@
     home-manager,
     nixpkgs-small,
     mango,
-    flake-parts,
     ...
   } @ inputs: 
     { 
