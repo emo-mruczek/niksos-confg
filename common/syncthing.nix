@@ -21,7 +21,7 @@ _: {
       folders = {
         "main" = {
           path = "/home/felix/Sync";
-          devices = ["izolda" "izaura" "klotylda"];
+          devices = ["izolda" "izaura" "klotylda" "izyda"];
           versioning = {
             type = "simple";
             params = {
