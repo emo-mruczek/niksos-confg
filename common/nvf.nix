@@ -10,6 +10,13 @@
     MANPAGER = "nvim +Man!";
   };
 
+  # # TODO: temp
+  # nixpkgs.overlays = [
+  #   (final: prev: {
+  #     inherit (inputs.nixpkgs-cpplint.legacyPackages.${pkgs.stdenv.system}) cpplint;
+  #   })
+  # ];
+
   programs.nvf = {
     enable = true;
 
@@ -182,7 +189,6 @@
         #go.enable = true;
         #assembly.enable = true;
         vhdl.enable = true;
-
       };
     };
   };

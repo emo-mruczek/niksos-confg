@@ -43,6 +43,7 @@
     vlc
     scrcpy
     blahaj
+    ente-desktop
     krita
     # lutris
     geckodriver

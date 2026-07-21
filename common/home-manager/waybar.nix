@@ -135,7 +135,7 @@
 
       * {
         min-height: 0;
-        font-family: Lexend, "Font JetBrainsMono 6 Free Solid";
+        font-family: "Google Sans", "Font JetBrainsMono 6 Free Solid";
         font-size: 20px;
         font-weight: 500;
       }

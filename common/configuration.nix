@@ -14,7 +14,7 @@
   nix.settings = {
     experimental-features = ["nix-command" "flakes"];
     trusted-substituters = [ "https://cache.poz.pet/felix"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" "felix:OKE38EUQKENVUouWyfCAJ9++9Fl0ObJMKCYDURm9aUM="];
+    trusted-public-keys = ["felix:ntsaTSEjCfMQm+f8yCCW3Fju1/6sfV2R9Z1ch8lukHg="];
   };
 
   programs = {

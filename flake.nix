@@ -2,6 +2,7 @@
   description = "Im cooking this stuff with a help of poz (poz.pet)";
 
   inputs = {
+
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
 

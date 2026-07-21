@@ -17,7 +17,7 @@
           border-radius: 10px;
           border: 2px solid #eb6f92;
           color: #e0def4;
-          font-family: 'Monofur Nerd Font';
+          font-family: 'Google Sans';
           font-size: 20px;
       }
 
