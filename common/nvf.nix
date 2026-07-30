@@ -55,7 +55,7 @@
       notes = {
         todo-comments = {
           enable = true;
-          setupOpts.highlight.pattern = ".*<(KEYWORDS)\s*";
+          setupOpts.highlight.pattern = ".*<(KEYWORDS)s*";
         };
       };
 
@@ -75,21 +75,27 @@
         style = "moon";
       };
 
-      maps = {
-        normal = {
-          "<leader>v" = {
-            action = "<CMD>Neotree toggle<CR>";
+      keymaps = [
+        {
+          key =  "<leader>v";
+          mode = "n";
+          action = "<CMD>Neotree toggle<CR>";
             silent = true;
-          };
+        }
+        {
+          key = "<leader>q";
+action = "<CMD>Precognition toggle<CR>";
+
+          mode = "n";
+
+
+        }
+       
           # "<leader>m" = {
           #   action = "<CMD>MarkdownPreviewToggle<CR>";
           #   silent = true;
           # };
-          "<leader>q" = {
-            action = "<CMD>Precognition toggle<CR>";
-          };
-        };
-      };
+      ];
 
       filetree.neo-tree = {
         enable = true;

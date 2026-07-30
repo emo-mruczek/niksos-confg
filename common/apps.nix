@@ -4,7 +4,8 @@
     p3x-onenote
     chromium
     element-desktop
-    mindustry-wayland
+    ivpn-ui
+    # mindustry-wayland
     teamtype
     blueman
     mangohud

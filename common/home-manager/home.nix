@@ -30,6 +30,7 @@
     ];
 
     pointerCursor = {
+      enable = true;
       package = pkgs.afterglow-cursors-recolored;
       name = "Afterglow-Recolored-Catppuccin-Mauve";
       size = 40;

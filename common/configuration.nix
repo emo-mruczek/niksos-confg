@@ -62,16 +62,18 @@
     playerctld.enable = true;
 
     blueman.enable = true;
-    mullvad-vpn = {
-      enable = true;
-      package = pkgs.mullvad-vpn;
-    };
-
+    # mullvad-vpn = {
+    #   enable = true;
+    #   package = pkgs.mullvad-vpn;
+    # };
+    #
     # broken
     printing = { 
       enable = true;
       drivers = with pkgs; [ foo2zjs ];
     };
+
+    ivpn.enable = true;
 
     avahi = {
       enable = true;
