@@ -145,22 +145,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-mindustry": {
-      "locked": {
-        "lastModified": 1785428427,
-        "narHash": "sha256-ZL7Zn9WPYF6bi/YhwL1gnrGGaIeoQId1iZiakrjiCB0=",
-        "owner": "nicoonoclaste",
-        "repo": "nixpkgs",
-        "rev": "065a68a116e84868a88bf9fd9fd43fb5c7574551",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nicoonoclaste",
-        "ref": "pkgs/mindustry",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs-small": {
       "locked": {
         "lastModified": 1785382966,
@@ -204,7 +188,6 @@
         "home-manager": "home-manager",
         "mango": "mango",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-mindustry": "nixpkgs-mindustry",
         "nixpkgs-small": "nixpkgs-small",
         "nvf": "nvf",
         "spicetify-nix": "spicetify-nix"

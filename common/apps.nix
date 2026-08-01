@@ -1,4 +1,4 @@
-{kgs, inputs,  ...}: {
+{pkgs,  ...}: {
   environment.systemPackages = with pkgs; [
     #inputs.nixpkgs-mindustry.legacyPackages.${pkgs.stdenv.system}.mindustry-wayland
         #    kicad
