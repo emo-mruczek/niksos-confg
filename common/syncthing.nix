@@ -70,7 +70,7 @@ _: {
         "mindustry" = {
           path = "/home/felix/.local/share/Mindustry";
           devices = ["izolda" "izaura" "izyda"];
-        }
+        };
         # "librewolf" = {
         #   path = "/home/felix/.librewolf";
         #   devices = ["izolda" "izaura"];
