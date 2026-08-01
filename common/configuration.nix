@@ -133,7 +133,7 @@
   users.users.felix = {
     isNormalUser = true;
     description = "felix";
-    extraGroups = ["networkmanager" "wheel" "ubridge" "libvirtd"];
+    extraGroups = ["networkmanager" "wheel" "ubridge" "libvirtd" "dialout"];
     packages = with pkgs; [
     ];
   };

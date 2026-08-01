@@ -6,6 +6,8 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
 
+    #    nixpkgs-mindustry.url = "github:nicoonoclaste/nixpkgs/pkgs/mindustry";
+
     mango = {
       url = "github:DreamMaoMao/mangowc";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -27,11 +29,14 @@
     };
   };
 
+  # arg = { a = 21; b = 37; }
+  # arg: arg.a + arg.b
+  # {a, b}: a + b
+  # {a, b} @ arg: a + b
+
   outputs = {
-    self,
     nixpkgs,
     home-manager,
-    nixpkgs-small,
     mango,
     ...
   } @ inputs: 

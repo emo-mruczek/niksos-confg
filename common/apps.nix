@@ -1,6 +1,7 @@
-{pkgs, ...}: {
+{kgs, inputs,  ...}: {
   environment.systemPackages = with pkgs; [
-    #    kicad
+    #inputs.nixpkgs-mindustry.legacyPackages.${pkgs.stdenv.system}.mindustry-wayland
+        #    kicad
     p3x-onenote
     chromium
     element-desktop
