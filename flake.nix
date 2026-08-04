@@ -48,6 +48,7 @@
         modules = [
           ./common
           ./izolda
+          ./options
 
          home-manager.nixosModules.home-manager
           mango.nixosModules.mango
@@ -59,6 +60,7 @@
         modules = [
           ./common
           ./izaura
+          ./options
 
           home-manager.nixosModules.home-manager
           mango.nixosModules.mango
@@ -70,6 +72,7 @@
         modules = [
           ./common
           ./izyda
+          ./options
 
           home-manager.nixosModules.home-manager
           mango.nixosModules.mango

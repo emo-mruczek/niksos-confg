@@ -49,7 +49,6 @@
     cachix
     killall
     awww
-    waybar
     wofi
     grim
     grimblast
