@@ -6,7 +6,7 @@ let
   inherit (lib.types.ints) positive;
 
 in {
-  options.monitors = {
+  options.monitors = mkOption {
     description = "monitor spec";
 
     type = attrsOf (submodule {

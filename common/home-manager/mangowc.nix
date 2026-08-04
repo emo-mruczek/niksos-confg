@@ -1,17 +1,17 @@
 # https://github.com/jawor182/dotfiles/blob/147d707c410a6d1819038ff5cdd385d695b6e65f/.config/mango/config.conf -> THANKS!
 
-{config, lib, ...}: let
+{osConfig, lib, ...}: let
 
   inherit (lib) elemAt attrNames attrValues;
-  inherit (config) monitors;
-  inherit (elemAt (attrValues monitors) 0) monitor;
+  inherit (osConfig) monitors;
+  monitor = elemAt (attrValues monitors) 0;
 
 in {
   wayland.windowManager.mango = {
     enable = true;
     extraConfig = ''
 
-      monitorrule=name:${elemAt( attrNames monitors) 0},width:${monitor.width},height:${monitor.height},refresh:${monitor.refreshRate}
+      monitorrule=name:${elemAt( attrNames monitors) 0},width:${toString monitor.resolution.width},height:${toString monitor.resolution.height},refresh:${toString monitor.refreshRate}
 
 env = XCURSOR_SIZE,24
 env = QT_QPA_PLATFORMTHEME,qt5ct # change to qt6ct if you have that
