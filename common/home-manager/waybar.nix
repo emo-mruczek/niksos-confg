@@ -9,7 +9,7 @@
         spacing = 1;
         passthrough = false;
         fixed-center = true;
-        modules-left = ["idle_inhibitor" "ext/workspaces" "mango/window"];
+        modules-left = ["idle_inhibitor" "mango/workspaces" "mango/window"];
         modules-center = ["dwl/window" "custom/hello-from-waybar" "mpris"];
         modules-right = ["cpu" "temperature" "memory" "pulseaudio" "clock" "clock#simpleclock" "battery" "tray" "custom/power"];
 
