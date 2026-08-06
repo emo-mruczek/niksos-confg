@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, inputs, ...}: {
   # nixpkgs.config.allowBroken = true;
 
   security = {
@@ -32,6 +32,8 @@
     winetricks
     #(callPackage ./packettracer.nix {inherit (pkgs) stdenv;}).packettracer
   ];
+
+  nixpkgs.overlays = [ inputs.waybar.overlays.${pkgs.stdenv.system}.waybar ];
 
   services = {
     udisks2.enable = true;
