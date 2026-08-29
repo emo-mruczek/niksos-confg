@@ -4,5 +4,6 @@ _: {
     ./kanata.nix
     ./hardware-configuration.nix 
     ./gpu.nix
+    ./configuration.nix
   ];
 }
