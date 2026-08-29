@@ -177,7 +177,7 @@ animation_curve_opafadein=0.46,1.0,0.29,1
 # Overview Setting
 hotarea_size=10
 enable_hotarea=1
-ov_tab_mode=0
+#ov_tab_mode=0
 overviewgappi=5
 overviewgappo=30
 
@@ -208,9 +208,9 @@ tap_to_click=1
 tap_and_drag=1
 drag_lock=0
 trackpad_natural_scrolling=1
-disable_while_typing=0
-left_handed=0
-middle_button_emulation=0
+trackpad_disable_while_typing=0
+trackpad_left_handed=0
+trackpad_middle_button_emulation=0
 swipe_min_threshold=1
 
 # mouse
