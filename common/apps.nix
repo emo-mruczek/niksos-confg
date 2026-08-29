@@ -1,11 +1,14 @@
-{pkgs,  ...}: {
+{pkgs, inputs, ...}: {
   environment.systemPackages = with pkgs; [
     #inputs.nixpkgs-mindustry.legacyPackages.${pkgs.stdenv.system}.mindustry-wayland
         #    kicad
+    inputs.wii.legacyPackages.${pkgs.stdenv.system}.wiiudownloader
     p3x-onenote
     chromium
     element-desktop
     ivpn-ui
+    nvidia-container-toolkit
+    nvidia-docker
     # mindustry-wayland
     teamtype
     blueman

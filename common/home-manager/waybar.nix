@@ -9,8 +9,8 @@
         spacing = 1;
         passthrough = false;
         fixed-center = true;
-        modules-left = ["idle_inhibitor" "mango/workspaces" "mango/window"];
-        modules-center = ["dwl/window" "custom/hello-from-waybar" "mpris"];
+        modules-left = ["idle_inhibitor" "mango/workspaces"];
+        modules-center = ["mango/window" "custom/hello-from-waybar" "mpris"];
         modules-right = ["cpu" "temperature" "memory" "pulseaudio" "clock" "clock#simpleclock" "battery" "tray" "custom/power"];
 
         "idle_inhibitor" = {
@@ -27,12 +27,12 @@
           interval = "once";
           exec = pkgs.writeShellScript "hello-from-waybar" ''echo "miał miał miał :3c" '';
         };
-        "ext/workspaces" = {
+        "mango/workspaces" = {
           on-click = "activate";
           format = "{name}";
-          all-outputs = true;
+          all-outputs = false;
           disable-scroll = false;
-          active-only = false;
+          active-only = true;
         };
         "tray" = {
           show-passive-items = true;

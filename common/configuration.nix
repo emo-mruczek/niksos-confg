@@ -11,6 +11,19 @@
     };
   };
 
+  # docker fucking internet
+    boot.kernel.sysctl."net.ipv4.ip_forward" = 1;
+  boot.kernel.sysctl."net.ipv6.ip_forward" = 1;
+  virtualisation.oci-containers.backend = "docker";
+# Next enable the NVIDIA Container Toolkit so Docker can see the GPU.
+# Docker automatically integrates with the NVIDIA GPU via the Container Device Interface (CDI).
+ hardware.nvidia-container-toolkit = {
+    enable = true;
+    mount-nvidia-executables = false;
+    
+
+  };
+
   nix.settings = {
     experimental-features = ["nix-command" "flakes"];
     trusted-substituters = [ "https://cache.poz.pet/felix"];
@@ -33,7 +46,7 @@
     #(callPackage ./packettracer.nix {inherit (pkgs) stdenv;}).packettracer
   ];
 
-  nixpkgs.overlays = [ inputs.waybar.overlays.${pkgs.stdenv.system}.waybar ];
+  nixpkgs.overlays = [ inputs.waybar.overlays.waybar ];
 
   services = {
     udisks2.enable = true;
@@ -100,11 +113,16 @@
         swtpm.enable = true;
       };
     };
-    docker.enable = true;
+    docker = {
+      enable = true;
+      daemon.settings.features.cdi = true;
+      daemon.settings.cdi-spec-dirs = ["/run/cdi"];
+    };
   };
 
   networking.firewall = {
     trustedInterfaces = ["virbr0"];
+    allowedTCPPorts = [53];
 
     enable = true;
   };
@@ -135,9 +153,7 @@
   users.users.felix = {
     isNormalUser = true;
     description = "felix";
-    extraGroups = ["networkmanager" "wheel" "ubridge" "libvirtd" "dialout"];
-    packages = with pkgs; [
-    ];
+    extraGroups = ["networkmanager" "wheel" "ubridge" "libvirtd" "dialout" "docker"];
   };
 
   users.groups.ubridge = {};

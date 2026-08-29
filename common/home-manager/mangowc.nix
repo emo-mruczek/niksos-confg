@@ -92,7 +92,7 @@ bind=SUPER+SHIFT,9,tag,9,0
 
 #bind=NONE,Print,spawn,$HOME/niksos-confg/common/home-manager/assets/screenshot.sh annotate
 
-bind = NONE, Print, spawn_shell, slurp | grim -g - -  | satty --early-exit --initial-tool brush -f - --output-filename \"~/screenshots/$(date +'screenshot-%Y%m%d%H%M%S.png')\" --copy-command \"wl-copy\"
+bind = NONE, Print, spawn_shell, slurp | grim -g - -  | satty --early-exit --initial-tool brush -f - --output-filename "~/screenshots/$(date +%Y%m%d%H%M%S).png" --copy-command \"wl-copy\"
 
 windowrule = isnamedscratchpad:1,appid:^(Spotify|signal|keepassxc), isfakefullscreen:1, isfloating:1
 bind = SUPER, T, toggle_named_scratchpad, Spotify, none, spotify

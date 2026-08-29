@@ -3,6 +3,8 @@
 
   inputs = {
 
+    wii.url = "github:imnotpoz/nixpkgs/wiiudownloader";
+
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
 
