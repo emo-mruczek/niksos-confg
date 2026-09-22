@@ -279,7 +279,7 @@ bind=CTRL+ALT,Right,resizewin,+50,+0
 # Mouse Button Bindings
 # btn_left and btn_right can't bind none mod key
 mousebind=SUPER,btn_left,moveresize,curmove
-mousebind=NONE,btn_middle,togglemaximizescreen,0
+mousebind=SUPER,btn_middle,togglemaximizescreen,0
 mousebind=SUPER,btn_right,moveresize,curresize
 
 

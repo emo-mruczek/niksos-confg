@@ -1,6 +1,9 @@
 {pkgs, ...}: {
   programs.waybar = {
     enable = true;
+    # package = pkgs.waybar.overrideAttrs {
+    #   doCheck = false;
+    # };
     settings = {
       mainBar = {
         layer = "top";
@@ -33,6 +36,7 @@
           all-outputs = false;
           disable-scroll = false;
           active-only = true;
+          hide-empty = true;
         };
         "tray" = {
           show-passive-items = true;

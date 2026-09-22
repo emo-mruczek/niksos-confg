@@ -77,11 +77,7 @@
     playerctld.enable = true;
 
     blueman.enable = true;
-    # mullvad-vpn = {
-    #   enable = true;
-    #   package = pkgs.mullvad-vpn;
-    # };
-    #
+   
     # broken
     printing = { 
       enable = true;
@@ -153,24 +149,34 @@
   users.users.felix = {
     isNormalUser = true;
     description = "felix";
-    extraGroups = ["networkmanager" "wheel" "ubridge" "libvirtd" "dialout" "docker"];
+    extraGroups = ["networkmanager" "wheel" "ubridge" "libvirtd" "dialout" "docker" "adbusers"];
   };
 
   users.groups.ubridge = {};
 
-  services.openssh.enable = true;
-  #  programs.ssh.extraConfig = "
-  # Host git.gay
-  # HostName        git.gay
-  # User            git
-  # IdentityFile    ~/.ssh/gitgay
-  # KexAlgorithms   ecdh-sha2-nistp521
+  #services.openssh.enable = true;
+   programs.ssh = { 
+    startAgent = true;
+    extraConfig = ''
+  Host github.com
+  HostName        github.com
+  User            git
+  IdentitiesOnly  yes
+  IdentityFile    ${pkgs.writeText "github.pub" "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIWiFYL2ktfPtIpkFrhGgUcgZuDFzJWs0YPbSbZaEcRm krokcia1@gmail.com"}
 
-  # Host github.com
-  # HostName        github.com
-  # User            git
-  # IdentityFile    ~/.ssh/github
-  # ";
+  Host gitgay
+  HostName        git.gay
+  User            emo-mruczek
+  IdentitiesOnly  yes
+  IdentityFile    ${pkgs.writeText "gitgay.pub" "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC/b5OU5Q+5zlc50Qrl1B3N91Ub7XvQ+bSeHFOAlWUGP krokcia1@gmail.com"}
+
+ Host pozpet
+  HostName        poz.pet
+  User            emo-mruczek
+  IdentitiesOnly  yes
+  IdentityFile    ${pkgs.writeText "pozpet.pub" "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDp4XgaI4dwwf5tpCLAR2XuKCCv/zNOBGSwKUrPq1U6E felix@izolda"}
+  '';};
+
 
   security.wrappers.ubridge = {
     source = "/run/current-system/sw/bin/ubridge";

@@ -2,7 +2,7 @@
   environment.systemPackages = with pkgs; [
     #inputs.nixpkgs-mindustry.legacyPackages.${pkgs.stdenv.system}.mindustry-wayland
         #    kicad
-    inputs.wii.legacyPackages.${pkgs.stdenv.system}.wiiudownloader
+    # inputs.wii.legacyPackages.${pkgs.stdenv.system}.wiiudownloader
     p3x-onenote
     chromium
     element-desktop
@@ -56,5 +56,7 @@
     nautilus
     godot_4
     gurk-rs
+
+    android-tools
   ];
 }
