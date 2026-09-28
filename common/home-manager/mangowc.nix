@@ -97,7 +97,7 @@ bind = NONE, Print, spawn_shell, slurp | grim -g - -  | satty --early-exit --ini
 windowrule = isnamedscratchpad:1,appid:^(Spotify|signal|keepassxc), isfakefullscreen:1, isfloating:1
 bind = SUPER, T, toggle_named_scratchpad, Spotify, none, spotify
 bind = SUPER, S, toggle_named_scratchpad, signal, none, signal-desktop
-bind = SUPER, K, toggle_named_scratchpad, keepassxc, none, keepassxc
+bind = SUPER, K, toggle_named_scratchpad, keepassxc, none, org.keepassxc.KeePassXC
 
 scratchpad_width_ratio=1.0
 scratchpad_height_ratio=1.0

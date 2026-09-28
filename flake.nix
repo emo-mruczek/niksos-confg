@@ -34,6 +34,12 @@
       url = "github:Alexays/Waybar";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    sable = {
+      url = "github:lunar-seal/nixpkgs/sable-desktop";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   # arg = { a = 21; b = 37; }

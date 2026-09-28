@@ -41,6 +41,7 @@
 
   environment.systemPackages = with pkgs; [
     #  (callPackage ./sddm-rose-pine.nix {})
+    (callPackage ./packages/foldit.nix {})
     wineWow64Packages.stable
     winetricks
     #(callPackage ./packettracer.nix {inherit (pkgs) stdenv;}).packettracer
@@ -175,7 +176,14 @@
   User            emo-mruczek
   IdentitiesOnly  yes
   IdentityFile    ${pkgs.writeText "pozpet.pub" "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDp4XgaI4dwwf5tpCLAR2XuKCCv/zNOBGSwKUrPq1U6E felix@izolda"}
-  '';};
+
+ Host tramwaj-git
+  HostName        git.tramwaj.ovh
+  User            emo-mruczek
+  IdentitiesOnly  yes
+  IdentityFile    ${pkgs.writeText "tramwaj-git.pub" "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP8mF7OM9clIPjxEomG4+2TgzkW5xF0vvlG/ia3tnuD3 felix@izolda"}
+  '';
+  };
 
 
   security.wrappers.ubridge = {

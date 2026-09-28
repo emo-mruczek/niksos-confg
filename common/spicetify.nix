@@ -21,7 +21,7 @@
       songStats
       copyToClipboard
       history
-      betterGenres
+      #  betterGenres
       autoSkip
       playNext
       copyLyrics

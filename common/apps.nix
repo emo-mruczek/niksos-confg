@@ -3,9 +3,9 @@
     #inputs.nixpkgs-mindustry.legacyPackages.${pkgs.stdenv.system}.mindustry-wayland
         #    kicad
     # inputs.wii.legacyPackages.${pkgs.stdenv.system}.wiiudownloader
+    inputs.sable.legacyPackages.${pkgs.stdenv.system}.sable-desktop
     p3x-onenote
     chromium
-    element-desktop
     ivpn-ui
     nvidia-container-toolkit
     nvidia-docker
