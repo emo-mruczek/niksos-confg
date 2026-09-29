@@ -41,7 +41,6 @@
     openconnect
     subversionClient
     asciinema
-    zathura
     mumble
     vesktop
     qbittorrent-enhanced

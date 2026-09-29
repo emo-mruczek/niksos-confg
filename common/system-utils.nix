@@ -70,7 +70,6 @@
 
     curlpp
     opentabletdriver
-    zathura
     piper
     libratbag
     ncdu

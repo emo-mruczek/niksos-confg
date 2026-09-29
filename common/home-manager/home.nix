@@ -20,6 +20,7 @@
     ./direnv.nix
     ./fzf.nix
     ./mangowc.nix
+    ./zathura.nix
   ] ++ [inputs.mango.hmModules.mango]; 
 
   home = {
