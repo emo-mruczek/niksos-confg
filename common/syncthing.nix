@@ -63,10 +63,10 @@ _: {
         #     };
         #   };
         # };
-        "btop" = {
-          path = "/home/felix/.config/btop/themes";
-          devices = ["izolda" "izaura" "izyda"];
-        };
+        # "btop" = {
+        #   path = "/home/felix/.config/btop/themes";
+        #   devices = ["izolda" "izaura" "izyda"];
+        # };
         "mindustry" = {
           path = "/home/felix/.local/share/Mindustry";
           devices = ["izolda" "izaura" "izyda"];

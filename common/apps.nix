@@ -8,7 +8,7 @@
     chromium
     ivpn-ui
     nvidia-container-toolkit
-    nvidia-docker
+    # nvidia-docker
     # mindustry-wayland
     teamtype
     blueman
