@@ -14,12 +14,18 @@ in {
       monitorrule=name:${elemAt( attrNames monitors) 0},width:${toString monitor.resolution.width},height:${toString monitor.resolution.height},refresh:${toString monitor.refreshRate}
 
 env = XCURSOR_SIZE,24
-env = QT_QPA_PLATFORMTHEME,qt5ct # change to qt6ct if you have that
+#env = QT_QPA_PLATFORMTHEME,qt5ct # change to qt6ct if you have that
 env = WLR_NO_HARDWARE_CURSORS,1
 #env = LIBVA_DRIVER_NAME,nvidia
 env = XDG_SESSION_TYPE,wayland
 #env = GBM_BACKEND,nvidia-drm
 #env = __GLX_VENDOR_LIBRARY_NAME, nvidia
+env = QT_STYLE_OVERRIDE,kvantum;
+env = QT_AUTO_SCREEN_SCALE_FACTOR,1;
+env = QT_QPA_PLATFORM,wayland;xcb;
+env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1;
+env = DISABLE_QT_COMPAT,0;
+
 
 # not working
 exec-once = awww-daemon

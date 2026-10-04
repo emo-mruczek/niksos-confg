@@ -21,6 +21,9 @@
     ./fzf.nix
     ./mangowc.nix
     ./zathura.nix
+    ./cursor.nix
+    ./gtk.nix
+    ./qt.nix
   ] ++ [inputs.mango.hmModules.mango]; 
 
   home = {
@@ -30,14 +33,14 @@
       git
     ];
 
-    pointerCursor = {
-      enable = true;
-      package = pkgs.afterglow-cursors-recolored;
-      name = "Afterglow-Recolored-Catppuccin-Mauve";
-      size = 40;
-      gtk.enable = true;
-      x11.enable = true;
-    };
+    # pointerCursor = {
+    #   enable = true;
+    #   package = pkgs.afterglow-cursors-recolored;
+    #   name = "Afterglow-Recolored-Catppuccin-Mauve";
+    #   size = 40;
+    #   gtk.enable = true;
+    #   x11.enable = true;
+    # };
 
     stateVersion = "23.11";
   };

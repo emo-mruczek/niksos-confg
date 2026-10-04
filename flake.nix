@@ -37,7 +37,6 @@
 
     sable = {
       url = "github:lunar-seal/nixpkgs/sable-desktop";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
   };

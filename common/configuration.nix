@@ -182,6 +182,15 @@
   User            emo-mruczek
   IdentitiesOnly  yes
   IdentityFile    ${pkgs.writeText "tramwaj-git.pub" "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP8mF7OM9clIPjxEomG4+2TgzkW5xF0vvlG/ia3tnuD3 felix@izolda"}
+
+ Host tramwaj-ssh
+  HostName        156.17.234.10
+  User            root
+  Port            10022
+  IdentitiesOnly  yes
+  IdentityFile    ${pkgs.writeText "tramwaj-git.pub" "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP8mF7OM9clIPjxEomG4+2TgzkW5xF0vvlG/ia3tnuD3 felix@izolda"
+
+    }
   '';
   };
 
