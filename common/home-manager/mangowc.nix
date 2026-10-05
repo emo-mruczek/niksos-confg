@@ -11,7 +11,7 @@ in {
     enable = true;
     extraConfig = ''
 
-      monitorrule=name:${elemAt( attrNames monitors) 0},width:${toString monitor.resolution.width},height:${toString monitor.resolution.height},refresh:${toString monitor.refreshRate}
+      monitor_rule=name:${elemAt( attrNames monitors) 0},width:${toString monitor.resolution.width},height:${toString monitor.resolution.height},refresh:${toString monitor.refreshRate}
 
 env = XCURSOR_SIZE,24
 #env = QT_QPA_PLATFORMTHEME,qt5ct # change to qt6ct if you have that
@@ -28,28 +28,28 @@ env = DISABLE_QT_COMPAT,0;
 
 
 # not working
-exec-once = awww-daemon
-exec-once = awww img ~/niksos-confg/rose-pine-wallpapers/wallpapers/pixelart/leaves-hard-pixelated.png
+exec_once = awww-daemon
+exec_once = awww img ~/niksos-confg/rose-pine-wallpapers/wallpapers/pixelart/leaves-hard-pixelated.png
 
-# not working
-exec-once = waybar
 
-exec-once = nm-applet --indicator & disown
-exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec_once = waybar
+
+exec_once = nm-applet --indicator & disown
+exec_once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 #exec-once = systemctl --user start batsignal
 #exec-once = systemctl --user start swayidle
 #exec-once = sway-audio-idle-inhibit & disown
 
 # tile,scroller,grid,deck,monocle,center_tile,vertical_tile,vertical_scroller
-tagrule=id:1,layout_name:dwindle
-tagrule=id:2,layout_name:dwindle
-tagrule=id:3,layout_name:dwindle
-tagrule=id:4,layout_name:dwindle
-tagrule=id:5,layout_name:dwindle
-tagrule=id:6,layout_name:dwindle
-tagrule=id:7,layout_name:dwindle
-tagrule=id:8,layout_name:dwindle
-tagrule=id:9,layout_name:dwindle
+tag_rule=id:1,layout_name:dwindle
+tag_rule=id:2,layout_name:dwindle
+tag_rule=id:3,layout_name:dwindle
+tag_rule=id:4,layout_name:dwindle
+tag_rule=id:5,layout_name:dwindle
+tag_rule=id:6,layout_name:dwindle
+tag_rule=id:7,layout_name:dwindle
+tag_rule=id:8,layout_name:dwindle
+tag_rule=id:9,layout_name:dwindle
 
 bind=SUPER,n,switch_layout
 circle_layout=dwindle
@@ -100,7 +100,7 @@ bind=SUPER+SHIFT,9,tag,9,0
 
 bind = NONE, Print, spawn_shell, slurp | grim -g - -  | satty --early-exit --initial-tool brush -f - --output-filename "~/screenshots/$(date +%Y%m%d%H%M%S).png" --copy-command \"wl-copy\"
 
-windowrule = isnamedscratchpad:1,appid:^(Spotify|signal|keepassxc), isfakefullscreen:1, isfloating:1
+window_rule = is_named_scratchpad:1,app_id:^(Spotify|signal|keepassxc), is_fake_fullscreen:1, is_floating:1
 bind = SUPER, T, toggle_named_scratchpad, Spotify, none, spotify
 bind = SUPER, S, toggle_named_scratchpad, signal, none, signal-desktop
 bind = SUPER, K, toggle_named_scratchpad, keepassxc, none, org.keepassxc.KeePassXC
@@ -147,7 +147,7 @@ shadows_size = 10
 shadows_blur = 15
 shadows_position_x = 0
 shadows_position_y = 0
-shadowscolor= 0x000000ff
+shadows_color= 0x000000ff
 
 border_radius=6
 no_radius_when_single=0
@@ -165,8 +165,8 @@ animation_fade_out=1
 tag_animation_direction=1
 zoom_initial_ratio=0.3
 zoom_end_ratio=0.8
-fadein_begin_opacity=0.5
-fadeout_begin_opacity=0.8
+fade_in_begin_opacity=0.5
+fade_out_begin_opacity=0.8
 animation_duration_move=500
 animation_duration_open=400
 animation_duration_tag=350
@@ -177,23 +177,23 @@ animation_curve_move=0.46,1.0,0.29,1
 animation_curve_tag=0.46,1.0,0.29,1
 animation_curve_close=0.08,0.92,0,1
 animation_curve_focus=0.46,1.0,0.29,1
-animation_curve_opafadeout=0.5,0.5,0.5,0.5
-animation_curve_opafadein=0.46,1.0,0.29,1
+animation_curve_opacity_fade_out=0.5,0.5,0.5,0.5
+animation_curve_opacity_fade_in=0.46,1.0,0.29,1
 
 # Overview Setting
 hotarea_size=10
 enable_hotarea=1
 #ov_tab_mode=0
-overviewgappi=5
-overviewgappo=30
+overview_gap_inner=5
+overview_gap_outer=30
 
 # Misc
 no_border_when_single=0
 axis_bind_apply_timeout=100
 focus_on_activate=1
-idleinhibit_ignore_visible=0
-sloppyfocus=1
-warpcursor=1
+idle_inhibit_ignore_visible=0
+sloppy_focus=1
+warp_cursor=1
 focus_cross_monitor=0
 focus_cross_tag=0
 enable_floating_snap=0
@@ -204,7 +204,7 @@ drag_tile_to_tile=1
 # keyboard
 repeat_rate=25
 repeat_delay=600
-numlockon=0
+numlock_on=0
 xkb_rules_layout = pl
 
 # Trackpad
@@ -224,21 +224,21 @@ swipe_min_threshold=1
 mouse_natural_scrolling=0
 
 # Appearance
-gappih=5
-gappiv=5
-gappoh=10
-gappov=10
+gap_inner_horizontal=5
+gap_inner_vertical=5
+gap_outer_horizontal=10
+gap_outer_vertical=10
 scratchpad_width_ratio=0.8
 scratchpad_height_ratio=0.9
-borderpx=4
-rootcolor=0x201b14ff
-bordercolor=0x444444ff
-focuscolor=0xc9b890ff
-maximizescreencolor=0x89aa61ff
-urgentcolor=0xad401fff
-scratchpadcolor=0x516c93ff
-globalcolor=0xb153a7ff
-overlaycolor=0x14a57cff
+border_px=4
+root_color=0x201b14ff
+border_color=0x444444ff
+focus_color=0xc9b890ff
+maximized_screen_color=0x89aa61ff
+urgent_color=0xad401fff
+scratchpad_color=0x516c93ff
+global_color=0xb153a7ff
+overlay_color=0x14a57cff
 
 # switch window focus
 bind=SUPER,Tab,focusstack,next
@@ -295,11 +295,8 @@ axisbind=SUPER,DOWN,viewtoright_have_client
 
 
 # layer rule
-layerrule=animation_type_open:zoom,layer_name:rofi
-layerrule=animation_type_close:zoom,layer_name:rofi
-    '';
-    autostart_sh = ''
-
+layer_rule=animation_type_open:zoom,layer_name:rofi
+layer_rule=animation_type_close:zoom,layer_name:rofi
     '';
   };
 }
