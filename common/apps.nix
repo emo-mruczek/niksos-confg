@@ -26,6 +26,8 @@
     # gimp
     thunderbird
     libreoffice-qt
+    hyphenDicts.en_GB
+    hunspell
     hollywood
     cbonsai
     cmatrix
