@@ -150,10 +150,9 @@
   users.users.felix = {
     isNormalUser = true;
     description = "felix";
-    extraGroups = ["networkmanager" "wheel" "ubridge" "libvirtd" "dialout" "docker" "adbusers"];
+    extraGroups = ["networkmanager" "wheel" "libvirtd" "dialout" "docker" "adbusers"];
   };
 
-  users.groups.ubridge = {};
 
   #services.openssh.enable = true;
    programs.ssh = { 
@@ -195,13 +194,6 @@
   };
 
 
-  security.wrappers.ubridge = {
-    source = "/run/current-system/sw/bin/ubridge";
-    capabilities = "cap_net_admin,cap_net_raw=ep";
-    owner = "root";
-    group = "ubridge";
-    permissions = "u+rx,g+x";
-  };
 
   nix.settings.trusted-users = ["root" "felix"];
 
