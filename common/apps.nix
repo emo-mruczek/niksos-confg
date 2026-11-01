@@ -7,7 +7,6 @@
     p3x-onenote
     chromium
     ivpn-ui
-    nvidia-container-toolkit
     # nvidia-docker
     # mindustry-wayland
     teamtype

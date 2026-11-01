@@ -11,19 +11,6 @@
     };
   };
 
-  # docker fucking internet
-  #   boot.kernel.sysctl."net.ipv4.ip_forward" = 1;
-  # boot.kernel.sysctl."net.ipv6.ip_forward" = 1;
-  # virtualisation.oci-containers.backend = "docker";
-# Next enable the NVIDIA Container Toolkit so Docker can see the GPU.
-# Docker automatically integrates with the NVIDIA GPU via the Container Device Interface (CDI).
- hardware.nvidia-container-toolkit = {
-    enable = true;
-    mount-nvidia-executables = false;
-    
-
-  };
-
   nix.settings = {
     experimental-features = ["nix-command" "flakes"];
     trusted-substituters = [ "https://cache.poz.pet/felix"];
