@@ -27,7 +27,6 @@
     libreoffice-qt
     hyphenDicts.en_GB
     hunspell
-    hollywood
     cbonsai
     cmatrix
     kdePackages.dolphin
@@ -55,7 +54,6 @@
     gnome-disk-utility
     nautilus
     godot_4
-    gurk-rs
 
     android-tools
   ];

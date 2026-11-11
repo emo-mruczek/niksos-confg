@@ -5,7 +5,7 @@
       efi.canTouchEfiVariables = true;
     };
 
-    kernelPackages = pkgs.linuxPackages_xanmod_latest;
+    kernelPackages = pkgs.linuxPackages_xanmod; # TODO: change to lastest after fix
 
     plymouth = {
       enable = true;
