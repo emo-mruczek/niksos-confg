@@ -3,7 +3,7 @@
     #inputs.nixpkgs-mindustry.legacyPackages.${pkgs.stdenv.system}.mindustry-wayland
         #    kicad
     # inputs.wii.legacyPackages.${pkgs.stdenv.system}.wiiudownloader
-    inputs.sable.legacyPackages.${pkgs.stdenv.system}.sable-desktop
+    # inputs.sable.legacyPackages.${pkgs.stdenv.system}.sable-desktop
     p3x-onenote
     chromium
     ivpn-ui
