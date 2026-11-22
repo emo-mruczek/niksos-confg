@@ -28,7 +28,7 @@
 
   environment.systemPackages = with pkgs; [
     #  (callPackage ./sddm-rose-pine.nix {})
-    (callPackage ./packages/foldit.nix {})
+    # (callPackage ./packages/foldit.nix {})
     wineWow64Packages.stable
     winetricks
     #(callPackage ./packettracer.nix {inherit (pkgs) stdenv;}).packettracer
